@@ -20,6 +20,7 @@
   },
   "extends": [
     "plugin:@typescript-eslint/recommended",
+    "plugin:tailwindcss/recommended",
     "next",
     "next/core-web-vitals",
     "prettier"
