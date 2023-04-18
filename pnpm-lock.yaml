@@ -31,6 +31,9 @@ dependencies:
   react-dom:
     specifier: 18.2.0
     version: registry.npmjs.org/react-dom@18.2.0(react@18.2.0)
+  react-icons:
+    specifier: 4.8.0
+    version: registry.npmjs.org/react-icons@4.8.0(react@18.2.0)
   tailwindcss:
     specifier: 3.3.1
     version: registry.npmjs.org/tailwindcss@3.3.1(postcss@8.4.21)
@@ -3076,6 +3079,17 @@ packages:
       loose-envify: registry.npmjs.org/loose-envify@1.4.0
       react: registry.npmjs.org/react@18.2.0
       scheduler: registry.npmjs.org/scheduler@0.23.0
+    dev: false
+
+  registry.npmjs.org/react-icons@4.8.0(react@18.2.0):
+    resolution: {integrity: sha512-N6+kOLcihDiAnj5Czu637waJqSnwlMNROzVZMhfX68V/9bu9qHaMIJC4UdozWoOk57gahFCNHwVvWzm0MTzRjg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/react-icons/-/react-icons-4.8.0.tgz}
+    id: registry.npmjs.org/react-icons/4.8.0
+    name: react-icons
+    version: 4.8.0
+    peerDependencies:
+      react: '*'
+    dependencies:
+      react: registry.npmjs.org/react@18.2.0
     dev: false
 
   registry.npmjs.org/react-is@16.13.1:
