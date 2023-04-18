@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Image from 'next/image';
 
@@ -38,7 +39,8 @@ export default function Home() {
   );
 }
 
-export const metadata = {
-  title: 'Tanmoy Banik',
-  description: 'Software Engineer',
+export const metadata: Metadata = {
+  title: 'Tanmoy Banik - Software Engineer | Full Stack Developer',
+  description:
+    'Experienced software engineer with 6+ years of expertise in back-end, front-end, and DevOps technologies. Proficient in various programming languages, databases, and frameworks for software development. Collaborates with design teams to develop user-friendly interfaces and implement design systems. Passionate and results-driven with a focus on delivering high-quality software solutions on time and within budget.',
 };
