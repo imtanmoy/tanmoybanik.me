@@ -6,6 +6,8 @@ import Image from 'next/image';
 import BgImage from '@/assets/images/intro-bg.jpg';
 import { Intro } from '@/ui/intro';
 
+import { openGraphImage } from './shared-metadata';
+
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
@@ -40,7 +42,37 @@ export default function Home() {
 }
 
 export const metadata: Metadata = {
+  ...openGraphImage,
   title: 'Tanmoy Banik - Software Engineer | Full Stack Developer',
   description:
     'Experienced software engineer with 6+ years of expertise in back-end, front-end, and DevOps technologies. Proficient in various programming languages, databases, and frameworks for software development. Collaborates with design teams to develop user-friendly interfaces and implement design systems. Passionate and results-driven with a focus on delivering high-quality software solutions on time and within budget.',
+  keywords: [
+    'software engineer',
+    'back-end',
+    'front-end',
+    'DevOps',
+    'Node.js',
+    'Java',
+    'Golang',
+    'Python',
+    'PHP',
+    'MongoDB',
+    'MySQL',
+    'PostgreSQL',
+    'Redis',
+    'TypeScript',
+    'React',
+    'Next.js',
+    'REST',
+    'GraphQL',
+    'StoryBook',
+    'CloudFormation',
+    'CDK',
+    'Docker',
+    'AWS',
+    'GCP',
+    'Nginx',
+    'user-friendly interfaces',
+    'design systems',
+  ],
 };
