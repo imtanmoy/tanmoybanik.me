@@ -25,7 +25,7 @@ export const Intro: React.FC = () => {
       >
         {'<Hello World!/>'}
       </h1>
-      <p className="max-w-screen-md px-12 py-0 text-center text-2xl font-light leading-normal tracking-widest">
+      <p className="max-w-screen-md px-12 py-0 text-center text-2xl font-light leading-normal tracking-widest text-white">
         {`I'm`} <span style={{ color: '#cc005f' }}>Tanmoy Banik</span> a
         passionate full-stack engineer who has experience building modern &
         highly scalable web apps and services.
