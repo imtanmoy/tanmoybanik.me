@@ -54,6 +54,7 @@ export const twitterCard: Metadata['twitter'] = {
 };
 
 export const siteMetadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: siteTitle,
   description: siteDescription,
   keywords: keywords,
