@@ -21,7 +21,7 @@ export const SocialLinks: React.FC = () => {
         <FiGithub className={classNames.icon} />
       </a>
       <a
-        href="https://www.linkedin.com/in/imtanmoy/"
+        href="https://www.linkedin.com/in/imtanmoybanik/"
         target="_blank"
         rel="noopener noreferrer"
         className={classNames.anchor}
