@@ -1,8 +1,9 @@
 import './globals.css';
 
+import { Analytics } from '@vercel/analytics/react';
 import Script from 'next/script';
 
-import Analytics from './analytics';
+import GoogleAnalytics from './google-analytics';
 
 export default function RootLayout({
   children,
@@ -14,6 +15,7 @@ export default function RootLayout({
       <body>
         {children}
         <Analytics />
+        <GoogleAnalytics />
         <Script id="onRouteChange">
           {`
                 (function (history) {

@@ -5,7 +5,7 @@ import { memo, useEffect } from 'react';
 
 const TRACKING_ID = process.env.NEXT_PUBLIC_GA4_TRACKING_ID || '';
 
-const Analytics = () => {
+const GoogleAnalytics = () => {
   useEffect(() => {
     if (!TRACKING_ID) return;
     gtag('config', TRACKING_ID, {
@@ -50,4 +50,4 @@ const Analytics = () => {
     </>
   );
 };
-export default memo(Analytics);
+export default memo(GoogleAnalytics);
