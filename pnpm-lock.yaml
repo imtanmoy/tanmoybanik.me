@@ -45,6 +45,9 @@ dependencies:
     version: registry.npmjs.org/typescript@5.0.4
 
 devDependencies:
+  '@types/gtag.js':
+    specifier: 0.0.12
+    version: registry.npmjs.org/@types/gtag.js@0.0.12
   '@typescript-eslint/eslint-plugin':
     specifier: 5.57.1
     version: registry.npmjs.org/@typescript-eslint/eslint-plugin@5.57.1(@typescript-eslint/parser@5.57.1)(eslint@8.38.0)(typescript@5.0.4)
@@ -359,6 +362,12 @@ packages:
     dependencies:
       tslib: registry.npmjs.org/tslib@2.5.0
     dev: false
+
+  registry.npmjs.org/@types/gtag.js@0.0.12:
+    resolution: {integrity: sha512-YQV9bUsemkzG81Ea295/nF/5GijnD2Af7QhEofh7xu+kvCN6RdodgNwwGWXB5GMI3NoyvQo0odNctoH/qLMIpg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/gtag.js/-/gtag.js-0.0.12.tgz}
+    name: '@types/gtag.js'
+    version: 0.0.12
+    dev: true
 
   registry.npmjs.org/@types/json-schema@7.0.11:
     resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/json-schema/-/json-schema-7.0.11.tgz}
