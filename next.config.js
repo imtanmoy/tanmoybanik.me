@@ -2,9 +2,6 @@
 const nextConfig = {
   reactStrictMode: true,
   compress: true,
-  experimental: {
-    appDir: true,
-  },
 };
 
 module.exports = nextConfig;
