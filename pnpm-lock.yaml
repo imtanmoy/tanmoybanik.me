@@ -17,6 +17,9 @@ dependencies:
   '@vercel/analytics':
     specifier: ^1.0.1
     version: registry.npmjs.org/@vercel/analytics@1.0.1
+  '@vercel/speed-insights':
+    specifier: 1.0.1
+    version: registry.npmjs.org/@vercel/speed-insights@1.0.1
   autoprefixer:
     specifier: ^10.4.14
     version: registry.npmjs.org/autoprefixer@10.4.14(postcss@8.4.27)
@@ -232,7 +235,7 @@ packages:
     dev: false
 
   registry.npmjs.org/@next/swc-darwin-arm64@13.4.13:
-    resolution: {integrity: sha512-ZptVhHjzUuivnXMNCJ6lER33HN7lC+rZ01z+PM10Ows21NHFYMvGhi5iXkGtBDk6VmtzsbqnAjnx4Oz5um0FjA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@next/swc-darwin-arm64/-/swc-darwin-arm64-13.4.13.tgz}
+    resolution: {integrity: sha512-ZptVhHjzUuivnXMNCJ6lER33HN7lC+rZ01z+PM10Ows21NHFYMvGhi5iXkGtBDk6VmtzsbqnAjnx4Oz5um0FjA==, tarball: https://registry.npmjs.org/@next/swc-darwin-arm64/-/swc-darwin-arm64-13.4.13.tgz}
     name: '@next/swc-darwin-arm64'
     version: 13.4.13
     engines: {node: '>= 10'}
@@ -243,7 +246,7 @@ packages:
     optional: true
 
   registry.npmjs.org/@next/swc-darwin-x64@13.4.13:
-    resolution: {integrity: sha512-t9nTiWCLApw8W4G1kqJyYP7y6/7lyal3PftmRturIxAIBlZss9wrtVN8nci50StDHmIlIDxfguYIEGVr9DbFTg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@next/swc-darwin-x64/-/swc-darwin-x64-13.4.13.tgz}
+    resolution: {integrity: sha512-t9nTiWCLApw8W4G1kqJyYP7y6/7lyal3PftmRturIxAIBlZss9wrtVN8nci50StDHmIlIDxfguYIEGVr9DbFTg==, tarball: https://registry.npmjs.org/@next/swc-darwin-x64/-/swc-darwin-x64-13.4.13.tgz}
     name: '@next/swc-darwin-x64'
     version: 13.4.13
     engines: {node: '>= 10'}
@@ -254,7 +257,7 @@ packages:
     optional: true
 
   registry.npmjs.org/@next/swc-linux-arm64-gnu@13.4.13:
-    resolution: {integrity: sha512-xEHUqC8eqR5DHe8SOmMnDU1K3ggrJ28uIKltrQAwqFSSSmzjnN/XMocZkcVhuncuxYrpbri0iMQstRyRVdQVWg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@next/swc-linux-arm64-gnu/-/swc-linux-arm64-gnu-13.4.13.tgz}
+    resolution: {integrity: sha512-xEHUqC8eqR5DHe8SOmMnDU1K3ggrJ28uIKltrQAwqFSSSmzjnN/XMocZkcVhuncuxYrpbri0iMQstRyRVdQVWg==, tarball: https://registry.npmjs.org/@next/swc-linux-arm64-gnu/-/swc-linux-arm64-gnu-13.4.13.tgz}
     name: '@next/swc-linux-arm64-gnu'
     version: 13.4.13
     engines: {node: '>= 10'}
@@ -265,7 +268,7 @@ packages:
     optional: true
 
   registry.npmjs.org/@next/swc-linux-arm64-musl@13.4.13:
-    resolution: {integrity: sha512-sNf3MnLAm8rquSSAoeD9nVcdaDeRYOeey4stOWOyWIgbBDtP+C93amSgH/LPTDoUV7gNiU6f+ghepTjTjRgIUQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@next/swc-linux-arm64-musl/-/swc-linux-arm64-musl-13.4.13.tgz}
+    resolution: {integrity: sha512-sNf3MnLAm8rquSSAoeD9nVcdaDeRYOeey4stOWOyWIgbBDtP+C93amSgH/LPTDoUV7gNiU6f+ghepTjTjRgIUQ==, tarball: https://registry.npmjs.org/@next/swc-linux-arm64-musl/-/swc-linux-arm64-musl-13.4.13.tgz}
     name: '@next/swc-linux-arm64-musl'
     version: 13.4.13
     engines: {node: '>= 10'}
@@ -276,7 +279,7 @@ packages:
     optional: true
 
   registry.npmjs.org/@next/swc-linux-x64-gnu@13.4.13:
-    resolution: {integrity: sha512-WhcRaJJSHyx9OWmKjjz+OWHumiPZWRqmM/09Bt7Up4UqUJFFhGExeztR4trtv3rflvULatu9IH/nTV8fUUgaMA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-13.4.13.tgz}
+    resolution: {integrity: sha512-WhcRaJJSHyx9OWmKjjz+OWHumiPZWRqmM/09Bt7Up4UqUJFFhGExeztR4trtv3rflvULatu9IH/nTV8fUUgaMA==, tarball: https://registry.npmjs.org/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-13.4.13.tgz}
     name: '@next/swc-linux-x64-gnu'
     version: 13.4.13
     engines: {node: '>= 10'}
@@ -287,7 +290,7 @@ packages:
     optional: true
 
   registry.npmjs.org/@next/swc-linux-x64-musl@13.4.13:
-    resolution: {integrity: sha512-+Y4LLhOWWZQIDKVwr2R17lq2KSN0F1c30QVgGIWfnjjHpH8nrIWHEndhqYU+iFuW8It78CiJjQKTw4f51HD7jA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@next/swc-linux-x64-musl/-/swc-linux-x64-musl-13.4.13.tgz}
+    resolution: {integrity: sha512-+Y4LLhOWWZQIDKVwr2R17lq2KSN0F1c30QVgGIWfnjjHpH8nrIWHEndhqYU+iFuW8It78CiJjQKTw4f51HD7jA==, tarball: https://registry.npmjs.org/@next/swc-linux-x64-musl/-/swc-linux-x64-musl-13.4.13.tgz}
     name: '@next/swc-linux-x64-musl'
     version: 13.4.13
     engines: {node: '>= 10'}
@@ -298,7 +301,7 @@ packages:
     optional: true
 
   registry.npmjs.org/@next/swc-win32-arm64-msvc@13.4.13:
-    resolution: {integrity: sha512-rWurdOR20uxjfqd1X9vDAgv0Jb26KjyL8akF9CBeFqX8rVaBAnW/Wf6A2gYEwyYY4Bai3T7p1kro6DFrsvBAAw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@next/swc-win32-arm64-msvc/-/swc-win32-arm64-msvc-13.4.13.tgz}
+    resolution: {integrity: sha512-rWurdOR20uxjfqd1X9vDAgv0Jb26KjyL8akF9CBeFqX8rVaBAnW/Wf6A2gYEwyYY4Bai3T7p1kro6DFrsvBAAw==, tarball: https://registry.npmjs.org/@next/swc-win32-arm64-msvc/-/swc-win32-arm64-msvc-13.4.13.tgz}
     name: '@next/swc-win32-arm64-msvc'
     version: 13.4.13
     engines: {node: '>= 10'}
@@ -309,7 +312,7 @@ packages:
     optional: true
 
   registry.npmjs.org/@next/swc-win32-ia32-msvc@13.4.13:
-    resolution: {integrity: sha512-E8bSPwRuY5ibJ3CzLQmJEt8qaWrPYuUTwnrwygPUEWoLzD5YRx9SD37oXRdU81TgGwDzCxpl7z5Nqlfk50xAog==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@next/swc-win32-ia32-msvc/-/swc-win32-ia32-msvc-13.4.13.tgz}
+    resolution: {integrity: sha512-E8bSPwRuY5ibJ3CzLQmJEt8qaWrPYuUTwnrwygPUEWoLzD5YRx9SD37oXRdU81TgGwDzCxpl7z5Nqlfk50xAog==, tarball: https://registry.npmjs.org/@next/swc-win32-ia32-msvc/-/swc-win32-ia32-msvc-13.4.13.tgz}
     name: '@next/swc-win32-ia32-msvc'
     version: 13.4.13
     engines: {node: '>= 10'}
@@ -320,7 +323,7 @@ packages:
     optional: true
 
   registry.npmjs.org/@next/swc-win32-x64-msvc@13.4.13:
-    resolution: {integrity: sha512-4KlyC6jWRubPnppgfYsNTPeWfGCxtWLh5vaOAW/kdzAk9widqho8Qb5S4K2vHmal1tsURi7Onk2MMCV1phvyqA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-13.4.13.tgz}
+    resolution: {integrity: sha512-4KlyC6jWRubPnppgfYsNTPeWfGCxtWLh5vaOAW/kdzAk9widqho8Qb5S4K2vHmal1tsURi7Onk2MMCV1phvyqA==, tarball: https://registry.npmjs.org/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-13.4.13.tgz}
     name: '@next/swc-win32-x64-msvc'
     version: 13.4.13
     engines: {node: '>= 10'}
@@ -592,6 +595,13 @@ packages:
     resolution: {integrity: sha512-Ux0c9qUfkcPqng3vrR0GTrlQdqNJ2JREn/2ydrVuKwM3RtMfF2mWX31Ijqo1opSjNAq6rK76PwtANw6kl6TAow==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@vercel/analytics/-/analytics-1.0.1.tgz}
     name: '@vercel/analytics'
     version: 1.0.1
+    dev: false
+
+  registry.npmjs.org/@vercel/speed-insights@1.0.1:
+    resolution: {integrity: sha512-cm8KTTsDgS1AbWsgIEZuMoyPUjclzeqJihyLp0tnA21B/x9iTE8hu2S5zM+/DBzihuHxWL1dx9pCWk22ctMFWQ==, tarball: https://registry.npmjs.org/@vercel/speed-insights/-/speed-insights-1.0.1.tgz}
+    name: '@vercel/speed-insights'
+    version: 1.0.1
+    requiresBuild: true
     dev: false
 
   registry.npmjs.org/acorn-jsx@5.3.2(acorn@8.10.0):
@@ -1881,7 +1891,7 @@ packages:
     version: 1.0.0
 
   registry.npmjs.org/fsevents@2.3.2:
-    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/fsevents/-/fsevents-2.3.2.tgz}
+    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==, tarball: https://registry.npmjs.org/fsevents/-/fsevents-2.3.2.tgz}
     name: fsevents
     version: 2.3.2
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
