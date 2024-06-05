@@ -1,0 +1,80 @@
+---
+import GoogleAnalytics from "../components/google-analytics.astro";
+
+const CF_ANALYTICS_TOKEN = import.meta.env.CF_ANALYTICS_TOKEN;
+const MEASUREMENT_ID = import.meta.env.GA_MEASUREMENT_ID;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      />
+    </noscript>
+    <title>Tanmoy Banik - Software Engineer | Full Stack Developer</title><meta
+      name="description"
+      content="Experienced software engineer with 6+ years of expertise in back-end, front-end, and DevOps technologies. Proficient in various programming languages, databases, and frameworks for software development. Collaborates with design teams to develop user-friendly interfaces and implement design systems. Passionate and results-driven with a focus on delivering high-quality software solutions on time and within budget."
+    />
+    <meta
+      name="keywords"
+      content="software engineer,back-end,front-end,DevOps,Node.js,Java,Golang,Python,PHP,MongoDB,MySQL,PostgreSQL,Redis,TypeScript,React,Next.js,REST,GraphQL,StoryBook,CloudFormation,CDK,Docker,AWS,GCP,Nginx,user-friendly interfaces,design systems"
+    />
+    <meta
+      property="og:title"
+      content="Tanmoy Banik - Software Engineer | Full Stack Developer"
+    />
+    <meta
+      property="og:description"
+      content="Experienced software engineer with 6+ years of expertise in back-end, front-end, and DevOps technologies. Proficient in various programming languages, databases, and frameworks for software development. Collaborates with design teams to develop user-friendly interfaces and implement design systems. Passionate and results-driven with a focus on delivering high-quality software solutions on time and within budget."
+    />
+    <meta property="og:url" content="https://tanmoybanik.me/" /><meta
+      property="og:image"
+      content="https://tanmoybanik.me/images/me.jpg"
+    />
+    <meta property="og:type" content="website" /><meta
+      name="twitter:card"
+      content="summary_large_image"
+    />
+    <meta name="twitter:site" content="@tanmoy_banik" /><meta
+      name="twitter:title"
+      content="Tanmoy Banik - Software Engineer | Full Stack Developer"
+    />
+    <meta
+      name="twitter:description"
+      content="Experienced software engineer with 6+ years of expertise in back-end, front-end, and DevOps technologies. Proficient in various programming languages, databases, and frameworks for software development. Collaborates with design teams to develop user-friendly interfaces and implement design systems. Passionate and results-driven with a focus on delivering high-quality software solutions on time and within budget."
+    />
+    <meta name="twitter:image" content="https://tanmoybanik.me/images/me.jpg" />
+
+    <!-- Cloudflare Web Analytics -->
+    <script
+      type="text/partytown"
+      is:inline
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon=`{"token": "${CF_ANALYTICS_TOKEN}"}`></script>
+    <!-- End Cloudflare Web Analytics -->
+
+    <!-- Google Analytics -->
+    <GoogleAnalytics measurementId={MEASUREMENT_ID} />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
