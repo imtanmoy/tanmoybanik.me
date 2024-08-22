@@ -1,0 +1,10 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.pinwheel.caregiver",
+      "sha256_cert_fingerprints": ["93:1D:21:C4:AE:37:28:82:15:DD:66:2A:94:B4:8A:B5:7D:AC:E1:A9:A2:2D:65:CB:65:3F:1B:3C:7A:18:71:1F"]
+    }
+  }
+]
