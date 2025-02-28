@@ -1,0 +1,18 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { NavBar } from "../components/nav-bar";
+import { BlobEffect } from "../components/blob-effect";
+import { Hero } from "../components/hero";
+---
+
+<Layout>
+  <main
+    class="flex min-h-screen flex-col font-inter bg-primary_bg text-primary_text"
+  >
+    <NavBar client:load />
+    <BlobEffect client:load />
+    <div class="flex flex-col items-center justify-center">
+      <Hero />
+    </div>
+  </main>
+</Layout>

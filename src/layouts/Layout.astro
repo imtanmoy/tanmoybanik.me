@@ -73,6 +73,22 @@ const MEASUREMENT_ID = import.meta.env.GA_MEASUREMENT_ID;
 
     <!-- Google Analytics -->
     <GoogleAnalytics measurementId={MEASUREMENT_ID} />
+    <style>
+      @keyframes rotate {
+        from {
+          rotate: 0deg;
+        }
+        50% {
+          scale: 1 1.5;
+        }
+        to {
+          rotate: 360deg;
+        }
+      }
+      .blob-animation {
+        animation: rotate 20s infinite;
+      }
+    </style>
   </head>
   <body>
     <slot />
