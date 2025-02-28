@@ -6,7 +6,7 @@ export const About = () => {
       <div className="max-w-2xl lg:max-w-3xl text-white/50 font-light flex flex-col mx-auto justify-center text-center gap-4 mb-10 pt-16 px-4">
         <div className="flex items-center justify-center mb-4">
           <div className="h-px w-12 bg-violet-500/50 mr-4"></div>
-          <h2 className="text-3xl font-semibold text-white">About Me</h2>
+          <h2 className="text-3xl font-semibold text-white text-center">About Me</h2>
           <div className="h-px w-12 bg-violet-500/50 ml-4"></div>
         </div>
 
@@ -63,4 +63,3 @@ export const About = () => {
   );
 };
 
-export default About;

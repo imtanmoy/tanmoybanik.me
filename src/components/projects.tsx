@@ -117,7 +117,7 @@ export const Projects: React.FC = () => {
       <div className="w-full mx-auto px-4 py-16">
         <div className="flex items-center justify-center mb-12">
           <div className="h-px w-12 bg-violet-500/50 mr-4"></div>
-          <h2 className="text-3xl font-semibold text-white">Projects</h2>
+          <h2 className="text-3xl font-semibold text-white text-center">Projects</h2>
           <div className="h-px w-12 bg-violet-500/50 ml-4"></div>
         </div>
 
