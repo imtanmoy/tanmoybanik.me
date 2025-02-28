@@ -7,11 +7,26 @@ export const ParticleAnimation = () => {
   const [init, setInit] = useState(false);
 
   useEffect(() => {
-    initParticlesEngine(async (engine) => {
-      await loadSlim(engine);
-    }).then(() => {
-      setInit(true);
-    });
+    let timeoutId: NodeJS.Timeout;
+    const initParticles = () => {
+      initParticlesEngine(async (engine) => {
+        await loadSlim(engine);
+      }).then(() => {
+        setInit(true);
+      });
+    };
+
+    if (typeof window !== "undefined" && "requestIdleCallback" in window) {
+      window.requestIdleCallback(initParticles, { timeout: 2000 });
+    } else {
+      timeoutId = setTimeout(initParticles, 1000);
+    }
+
+    return () => {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+    };
   }, []);
 
   const options = useMemo(

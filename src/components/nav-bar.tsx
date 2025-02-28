@@ -25,13 +25,16 @@ export const NavBar = () => {
         const navbarHeight = 64; // Assuming navbar is 64px tall, adjust if needed
 
         const targetPosition =
-          targetSection.getBoundingClientRect().top +
-          window.pageYOffset -
+          window.pageYOffset +
+          targetSection.getBoundingClientRect().top -
           navbarHeight;
 
         window.scrollTo({
           top: targetPosition,
-          behavior: "smooth",
+          behavior: window.matchMedia("(prefers-reduced-motion: reduce)")
+            .matches
+            ? "auto"
+            : "smooth",
         });
 
         // Update active section
