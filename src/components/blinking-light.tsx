@@ -4,7 +4,7 @@ export const BlinkingLight = () => {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 649 382"
-        className={`w-full max-w-2xl h-80 blur-lg animate-tubelight`}
+        className="w-full max-w-2xl h-80 blur-lg animate-tubelight"
         aria-hidden="true"
       >
         <defs>

@@ -3,6 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import { NavBar } from "../components/nav-bar";
 import { BlobEffect } from "../components/blob-effect";
 import { Hero } from "../components/hero";
+import About from "../components/about";
+import { Education } from "../components/education";
 ---
 
 <Layout>
@@ -13,6 +15,8 @@ import { Hero } from "../components/hero";
     <BlobEffect client:load />
     <div class="flex flex-col items-center justify-center">
       <Hero client:load />
+      <About client:load />
+      <Education client:load />
     </div>
   </main>
 </Layout>

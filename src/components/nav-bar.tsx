@@ -10,22 +10,57 @@ const NAV_LINKS = [
 ];
 
 export const NavBar = () => {
-  // Changed initial state back to false
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const [scrolled, setScrolled] = useState(false);
 
   // Handle click event for menu toggle
   const handleMenuToggle = () => {
     setIsOpen((prevState) => !prevState);
   };
 
-  useEffect(() => {
-    console.log("Navbar loaded");
-  }, []);
+  // Handle scroll to specific section with smooth behavior
+  const handleScrollTo = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    sectionId: string
+  ) => {
+    e.preventDefault();
+    const targetSection = document.getElementById(sectionId.substring(1));
 
-  // Handle scroll to determine active section
+    if (targetSection) {
+      // Get height of navbar to offset scrolling position
+      const navbarHeight = 64; // Assuming navbar is 64px tall, adjust if needed
+
+      const targetPosition =
+        targetSection.getBoundingClientRect().top +
+        window.pageYOffset -
+        navbarHeight;
+
+      window.scrollTo({
+        top: targetPosition,
+        behavior: "smooth",
+      });
+
+      // Update active section
+      setActiveSection(sectionId.substring(1));
+
+      // Close mobile menu if open
+      if (isOpen) {
+        setIsOpen(false);
+      }
+    }
+  };
+
+  // Handle scroll to determine active section and scroll state
   useEffect(() => {
     const handleScroll = () => {
+      // Check if user has scrolled to add subtle background on scroll
+      if (window.scrollY > 10) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+
       const sections = NAV_LINKS.map((link) => link.href.substring(1));
 
       for (const section of sections) {
@@ -46,7 +81,9 @@ export const NavBar = () => {
 
   return (
     <nav
-      className="fixed w-screen bg-gray-900 z-50"
+      className={`fixed w-screen z-50 transition-all duration-300 ${
+        scrolled ? "bg-black/30 backdrop-blur-sm" : "bg-transparent"
+      }`}
       role="navigation"
       aria-label="Main navigation"
     >
@@ -57,6 +94,7 @@ export const NavBar = () => {
             <a
               key={link.id}
               href={link.href}
+              onClick={(e) => handleScrollTo(e, link.href)}
               className={`px-3 py-2 rounded-md transition-colors ${
                 activeSection === link.href.substring(1)
                   ? "text-violet-500 font-bold"
@@ -73,7 +111,11 @@ export const NavBar = () => {
 
         {/* Mobile navigation - simplified with one button */}
         <div className="mx-auto h-14 md:hidden flex justify-between items-center px-4">
-          <a href="#home" className="text-xl font-bold">
+          <a
+            href="#home"
+            className="text-xl font-bold"
+            onClick={(e) => handleScrollTo(e, "#home")}
+          >
             <span className="text-violet-500">
               {"<"}TB{"/>"}
             </span>
@@ -125,7 +167,7 @@ export const NavBar = () => {
         {/* Mobile menu dropdown */}
         <div
           id="mobile-menu"
-          className={`md:hidden absolute top-14 left-0 right-0 bg-gray-800 shadow-md ${
+          className={`md:hidden absolute top-14 left-0 right-0 bg-black/80 backdrop-blur-md shadow-lg ${
             isOpen ? "block" : "hidden"
           }`}
         >
@@ -134,15 +176,15 @@ export const NavBar = () => {
               <a
                 key={link.id}
                 href={link.href}
+                onClick={(e) => handleScrollTo(e, link.href)}
                 className={`block px-3 py-2 rounded-md ${
                   activeSection === link.href.substring(1)
-                    ? "bg-gray-700 text-violet-400 font-medium"
-                    : "text-gray-300 hover:bg-gray-700 hover:text-violet-400"
+                    ? "bg-violet-900/40 text-violet-400 font-medium"
+                    : "text-gray-300 hover:bg-violet-900/30 hover:text-violet-400"
                 }`}
                 aria-current={
                   activeSection === link.href.substring(1) ? "page" : undefined
                 }
-                onClick={() => setIsOpen(false)}
               >
                 {link.text}
               </a>
