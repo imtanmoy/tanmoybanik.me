@@ -24,9 +24,6 @@ export const Education: React.FC = () => {
               </h3>
               <p className="text-violet-400 mb-1">{item.institution}</p>
               <p className="text-gray-400 mb-2">{item.year}</p>
-              <p className="text-gray-500 text-sm italic">
-                Focus: {item.focus}
-              </p>
             </FlatCard>
           ))}
         </div>
