@@ -17,7 +17,7 @@ export const ParticleAnimation = () => {
     };
 
     if (typeof window !== "undefined" && "requestIdleCallback" in window) {
-      window.requestIdleCallback(initParticles, { timeout: 2000 });
+      window.requestIdleCallback(initParticles, { timeout: 1000 });
     } else {
       timeoutId = setTimeout(initParticles, 1000);
     }
