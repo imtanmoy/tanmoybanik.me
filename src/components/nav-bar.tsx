@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 const NAV_LINKS = [
   { id: "one", href: "#home", text: "Home" },
@@ -14,42 +14,37 @@ export const NavBar = () => {
   const [activeSection, setActiveSection] = useState("home");
   const [scrolled, setScrolled] = useState(false);
 
-  // Handle click event for menu toggle
-  const handleMenuToggle = () => {
-    setIsOpen((prevState) => !prevState);
-  };
-
   // Handle scroll to specific section with smooth behavior
-  const handleScrollTo = (
-    e: React.MouseEvent<HTMLAnchorElement>,
-    sectionId: string
-  ) => {
-    e.preventDefault();
-    const targetSection = document.getElementById(sectionId.substring(1));
+  const handleScrollTo = useCallback(
+    (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+      e.preventDefault();
+      const targetSection = document.getElementById(sectionId.substring(1));
 
-    if (targetSection) {
-      // Get height of navbar to offset scrolling position
-      const navbarHeight = 64; // Assuming navbar is 64px tall, adjust if needed
+      if (targetSection) {
+        // Get height of navbar to offset scrolling position
+        const navbarHeight = 64; // Assuming navbar is 64px tall, adjust if needed
 
-      const targetPosition =
-        targetSection.getBoundingClientRect().top +
-        window.pageYOffset -
-        navbarHeight;
+        const targetPosition =
+          targetSection.getBoundingClientRect().top +
+          window.pageYOffset -
+          navbarHeight;
 
-      window.scrollTo({
-        top: targetPosition,
-        behavior: "smooth",
-      });
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth",
+        });
 
-      // Update active section
-      setActiveSection(sectionId.substring(1));
+        // Update active section
+        setActiveSection(sectionId.substring(1));
 
-      // Close mobile menu if open
-      if (isOpen) {
-        setIsOpen(false);
+        // Close mobile menu if open
+        if (isOpen) {
+          setIsOpen(false);
+        }
       }
-    }
-  };
+    },
+    [isOpen]
+  );
 
   // Handle scroll to determine active section and scroll state
   useEffect(() => {
@@ -125,7 +120,7 @@ export const NavBar = () => {
           <button
             type="button"
             className="p-2 text-gray-300 z-100"
-            onClick={handleMenuToggle}
+            onClick={() => setIsOpen(!isOpen)}
             aria-expanded={isOpen}
             aria-controls="mobile-menu"
             aria-label="Toggle navigation menu"
@@ -167,7 +162,7 @@ export const NavBar = () => {
         {/* Mobile menu dropdown */}
         <div
           id="mobile-menu"
-          className={`md:hidden absolute top-14 left-0 right-0 bg-black/80 backdrop-blur-md shadow-lg ${
+          className={`md:hidden absolute top-14 left-0 right-0 bg-black backdrop-blur-md shadow-lg ${
             isOpen ? "block" : "hidden"
           }`}
         >
