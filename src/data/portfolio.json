@@ -1,4 +1,75 @@
 {
+  "projects": [
+    {
+      "title": "Document Management System",
+      "description": "Developed a comprehensive document management system for a banking client, enabling secure digital transformation of physical records with advanced access controls and OCR integration.",
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Python",
+        "Flask",
+        "Tesseract OCR",
+        "Spring Boot",
+        "Docker",
+        "Celery",
+        "Redis",
+        "MSSQL"
+      ],
+      "image": "/images/dms.png",
+      "link": ""
+    },
+    {
+      "title": "Natural Language Query Platform",
+      "description": "Engineered an innovative analytics platform with a natural language-driven interface, allowing users to effortlessly query and visualize complex datasets through intuitive language interactions.",
+      "technologies": [
+        "React",
+        "D3.js",
+        "Node.js",
+        "Python",
+        "RabbitMQ",
+        "MySQL",
+        "Spring Boot",
+        "Docker",
+        "AWS"
+      ],
+      "image": "/images/nlq.png"
+    },
+    {
+      "title": "Healthcare Practice Management Platform",
+      "description": "Created a comprehensive web application for healthcare professionals to streamline practice operations, including patient record management, appointment scheduling, and billing integrations.",
+      "technologies": [
+        "React",
+        "Node.js",
+        "TypeScript",
+        "MongoDB",
+        "AWS",
+        "Docker",
+        "GraphQL",
+        "Material-UI",
+        "Redis"
+      ],
+      "image": "/images/ease.jpeg",
+      "link": "https://easepractice.com"
+    },
+    {
+      "title": "Pinwheel Parental Control Smartphone",
+      "description": "Developed key components for a kid-safe smartphone platform with robust parental controls, focusing on secure authentication, device management, and family-friendly app ecosystem.",
+      "technologies": [
+        "React Native",
+        "Node.js",
+        "NestJS",
+        "TypeScript",
+        "PostgreSQL",
+        "AWS",
+        "Docker",
+        "RabbitMQ",
+        "MQTT",
+        "WebAuthn"
+      ],
+      "image": "/images/pinwheel.png",
+      "link": "https://pinwheel.com"
+    }
+  ],
   "education": [
     {
       "degree": "Master of Science in Computer Science and Engineering",

@@ -6,6 +6,7 @@ import { Hero } from "../components/hero";
 import About from "../components/about";
 import { Education } from "../components/education";
 import { Footer } from "../components/footer";
+import { Projects } from "../components/projects";
 ---
 
 <Layout>
@@ -17,6 +18,7 @@ import { Footer } from "../components/footer";
     <div class="flex flex-col items-center justify-center">
       <Hero client:load />
       <About client:load />
+      <Projects client:load />
       <Education client:load />
       <Footer />
     </div>

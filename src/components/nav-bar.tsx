@@ -4,7 +4,7 @@ const NAV_LINKS = [
   { id: "one", href: "#home", text: "Home" },
   { id: "two", href: "#about", text: "About" },
   { id: "three", href: "#experience", text: "Experience" },
-  { id: "four", href: "#project", text: "Project" },
+  { id: "four", href: "#projects", text: "Projects" },
   { id: "five", href: "#awards", text: "Awards" },
   { id: "six", href: "#education", text: "Education" },
 ];
