@@ -23,14 +23,16 @@ const AwardCard: React.FC<{ award: Award }> = ({ award }) => {
     <FlatCard className="flex items-start gap-4 transition-all duration-300 hover:border-violet-500/50">
       {award.logo && (
         <div className="w-16 h-16 flex-shrink-0 bg-white/10 rounded-lg flex items-center justify-center p-2">
-          <img 
-            src={award.logo} 
-            alt={`${award.title} logo`} 
+          <img
+            src={award.logo}
+            alt={`${award.title} logo`}
             className="max-w-full max-h-full object-contain"
+            decoding="async"
+            loading="lazy"
           />
         </div>
       )}
-      
+
       <div className="flex-1">
         <div className="flex justify-between items-start mb-2">
           <div>
@@ -39,9 +41,9 @@ const AwardCard: React.FC<{ award: Award }> = ({ award }) => {
           </div>
           <span className="text-gray-400 text-sm font-light">{award.year}</span>
         </div>
-        
+
         <p className="text-gray-400 text-sm mb-2">{award.description}</p>
-        
+
         <div className="flex items-center text-violet-400 text-xs mt-2">
           <FiAward className="mr-2" />
           <span>Award Recipient</span>
@@ -52,7 +54,9 @@ const AwardCard: React.FC<{ award: Award }> = ({ award }) => {
 };
 
 export const Awards: React.FC = () => {
-  const sortedAwards = [...awardsData].sort((a, b) => parseInt(b.year) - parseInt(a.year));
+  const sortedAwards = [...awardsData].sort(
+    (a, b) => parseInt(b.year) - parseInt(a.year)
+  );
 
   return (
     <AnimateOnScroll id="awards">
@@ -72,4 +76,3 @@ export const Awards: React.FC = () => {
     </AnimateOnScroll>
   );
 };
-

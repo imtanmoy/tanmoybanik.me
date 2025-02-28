@@ -44,6 +44,8 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
               src={project.image}
               alt={`${projectTitle} thumbnail`}
               className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              decoding="async"
+              loading="lazy"
             />
             {project.featured && (
               <span className="absolute top-2 right-2 px-2 py-0.5 bg-violet-900/50 text-violet-400 text-xs rounded-full">
