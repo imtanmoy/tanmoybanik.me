@@ -70,6 +70,29 @@
       "link": "https://pinwheel.com"
     }
   ],
+  "awards": [
+    {
+      "title": "National ICT Award",
+      "organization": "Cramstack",
+      "description": "Power analytics for Bangladesh's power ministry (Big Data).",
+      "year": "2019",
+      "logo": "/images/logo-ict.png"
+    },
+    {
+      "title": "Rockstart AI Accelerator",
+      "organization": "Cramstack",
+      "description": "Search-driven data analytics platform (Netherlands Batch 2).",
+      "year": "2018",
+      "logo": "/images/logo-rock-start.png"
+    },
+    {
+      "title": "Echelon 100 National Champion",
+      "organization": "Cramstack",
+      "description": "Search-driven data analytics (NLQ) platform (Singapore).",
+      "year": "2018",
+      "logo": "/images/logo-e27.png"
+    }
+  ],
   "education": [
     {
       "degree": "Master of Science in Computer Science and Engineering",
@@ -102,6 +125,106 @@
     {
       "name": "Python for Everybody Specialization",
       "issuer": "Coursera"
+    }
+  ],
+  "experiences": [
+    {
+      "company": "Pinwheel",
+      "position": "Full Stack Software Engineer",
+      "location": "Remote",
+      "startDate": "May 2023",
+      "endDate": "Present",
+      "highlights": [
+        "Built full-stack apps with React, React Native, Node.js, Nest.js, and PostgreSQL",
+        "Integrated WebAuthn and biometric-based login for web and React Native projects",
+        "Developed a RabbitMQ-based service for real-time mobile device updates via MQTT protocol",
+        "Implemented unit and integration tests using various frameworks",
+        "Architected microservices using AWS ECS, Docker, and PostgreSQL",
+        "Created comprehensive CI/CD pipelines using GitHub Actions"
+      ],
+      "technologies": [
+        "React",
+        "React Native",
+        "Node.js",
+        "NestJS",
+        "TypeScript",
+        "PostgreSQL",
+        "RabbitMQ",
+        "MQTT",
+        "WebAuthn",
+        "AWS ECS",
+        "Docker",
+        "GitHub Actions"
+      ]
+    },
+    {
+      "company": "MedEase Technology (Ease)",
+      "position": "Senior Software Engineer",
+      "location": "Remote",
+      "startDate": "May 2021",
+      "endDate": "Mar 2023",
+      "highlights": [
+        "Designed and developed high-performance Node.js microservices using NestJS framework and AWS Lambda",
+        "Developed UI using React with a focus on performance and user experience",
+        "Optimized Node.js serverless functions, reducing cold start times",
+        "Developed an embedded banking solution integrating partner bank APIs",
+        "Architected automated SSL certificate generation, reducing manual configuration time by 80%",
+        "Optimized CI/CD pipelines, decreasing deployment times by 50%",
+        "Implemented HIPAA-compliant data handling for healthcare platforms"
+      ],
+      "technologies": [
+        "Node.js",
+        "NestJS",
+        "React",
+        "AWS Lambda",
+        "PostgreSQL",
+        "MySQL",
+        "Docker",
+        "CI/CD",
+        "HIPAA Compliance"
+      ]
+    },
+    {
+      "company": "Cramstack Ltd.",
+      "position": "Lead Software Engineer",
+      "location": "Dhaka, Bangladesh",
+      "startDate": "Jan 2020",
+      "endDate": "Apr 2021",
+      "highlights": [
+        "Developed secure, on-premise document management system using React, Spring Boot, and MSSQL",
+        "Engineered a document processing pipeline with Python (Flask), Celery, RabbitMQ, and Tesseract OCR",
+        "Handled around 100k documents with efficient processing capabilities",
+        "Integrated role-based access controls and audit logging for regulatory compliance",
+        "Automated COVID-19 data integration and daily chart generation",
+        "Led cross-functional remote team for healthcare product development",
+        "Created context-based Natural Language Query (NLQ) suggestion framework"
+      ],
+      "technologies": [
+        "React",
+        "Spring Boot",
+        "MSSQL",
+        "Python",
+        "Flask",
+        "Celery",
+        "RabbitMQ",
+        "Tesseract OCR",
+        "Docker",
+        "CI/CD",
+        "Natural Language Processing"
+      ]
+    },
+    {
+      "company": "Dreamerz Lab Ltd.",
+      "position": "Full Stack Engineer",
+      "location": "Dhaka, Bangladesh",
+      "startDate": "Jan 2017",
+      "endDate": "Apr 2018",
+      "highlights": [
+        "Developed a social network application using the MEAN stack",
+        "Implemented REST APIs with Laravel",
+        "Developed mobile apps using IONIC 2"
+      ],
+      "technologies": ["MEAN Stack", "Laravel", "IONIC", "Mobile Development"]
     }
   ]
 }
