@@ -59,8 +59,8 @@ export const NavBar = () => {
               href={link.href}
               className={`px-3 py-2 rounded-md transition-colors ${
                 activeSection === link.href.substring(1)
-                  ? "text-pink-500 font-bold"
-                  : "text-gray-300 hover:text-pink-400"
+                  ? "text-violet-500 font-bold"
+                  : "text-gray-300 hover:text-violet-400"
               }`}
               aria-current={
                 activeSection === link.href.substring(1) ? "page" : undefined
@@ -74,7 +74,7 @@ export const NavBar = () => {
         {/* Mobile navigation - simplified with one button */}
         <div className="mx-auto h-14 md:hidden flex justify-between items-center px-4">
           <a href="#home" className="text-xl font-bold">
-            <span className="text-pink-500">
+            <span className="text-violet-500">
               {"<"}TB{"/>"}
             </span>
           </a>
@@ -136,8 +136,8 @@ export const NavBar = () => {
                 href={link.href}
                 className={`block px-3 py-2 rounded-md ${
                   activeSection === link.href.substring(1)
-                    ? "bg-gray-700 text-pink-400 font-medium"
-                    : "text-gray-300 hover:bg-gray-700 hover:text-pink-400"
+                    ? "bg-gray-700 text-violet-400 font-medium"
+                    : "text-gray-300 hover:bg-gray-700 hover:text-violet-400"
                 }`}
                 aria-current={
                   activeSection === link.href.substring(1) ? "page" : undefined
