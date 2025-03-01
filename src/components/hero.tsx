@@ -1,6 +1,7 @@
 import { ParticleAnimation } from "./particle-animation";
 import { BlinkingLight } from "./blinking-light";
 import { SocialLinks } from "./social-links";
+import { Balancer } from "react-wrap-balancer";
 
 // Stars component for corner decorations
 const Stars = () => {
@@ -47,7 +48,8 @@ const toTopRight = {
 
 const tubLight = {
   mask: "linear-gradient(90deg,rgba(0,0,0,0) 0%, rgb(0,0,0) 50%,rgba(0,0,0,0) 100%)",
-  WebkitMask: "linear-gradient(90deg,rgba(0,0,0,0) 0%, rgb(0,0,0) 50%,rgba(0,0,0,0) 100%)",
+  WebkitMask:
+    "linear-gradient(90deg,rgba(0,0,0,0) 0%, rgb(0,0,0) 50%,rgba(0,0,0,0) 100%)",
 };
 
 export const Hero = () => {
@@ -57,7 +59,10 @@ export const Hero = () => {
         <ParticleAnimation />
       </div>
 
-      <div className="grid grid-cols-8 sm:grid-cols-12 pt-16 text-center items-center text-[#e6d4ff]" id="home">
+      <div
+        className="grid grid-cols-8 sm:grid-cols-12 pt-16 text-center items-center text-[#e6d4ff]"
+        id="home"
+      >
         <div className="absolute inset-0 flex items-top justify-center top-0">
           <BlinkingLight />
         </div>
@@ -67,7 +72,7 @@ export const Hero = () => {
             style={tubLight}
           ></div>
         </div>
-        
+
         {/* 1st row */}
         <div
           className="hidden sm:block h-full col-span-2 border-white border-opacity-10 border-b border-r"
@@ -83,7 +88,7 @@ export const Hero = () => {
           className="hidden sm:block col-span-2 h-full border-white border-opacity-10 border-l border-b"
           style={toTopRight}
         ></div>
-        
+
         {/* 2nd row */}
         <div
           className="hidden sm:block h-full col-span-2 border-white border-opacity-10 border-b border-r"
@@ -98,7 +103,7 @@ export const Hero = () => {
           className="hidden sm:block col-span-2 h-full border-white border-opacity-10 border-l border-b"
           style={toRight}
         ></div>
-        
+
         {/* 3rd row */}
         <div
           className="hidden sm:block h-full col-span-2 border-white border-opacity-10 border-b border-r"
@@ -109,7 +114,9 @@ export const Hero = () => {
           <Stars />
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold relative">
             <span className="text-violet-500">Tan</span>
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-violet-500 via-purple-300 to-violet-500">moy</span>
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-violet-500 via-purple-300 to-violet-500">
+              moy
+            </span>
             <div className="absolute -inset-1 blur-sm bg-violet-500/20 rounded-lg -z-10"></div>
           </h1>
         </div>
@@ -118,7 +125,7 @@ export const Hero = () => {
           className="hidden sm:block col-span-2 h-full border-l border-white border-opacity-10 border-b"
           style={toRight}
         ></div>
-        
+
         {/* 4th row */}
         <div
           className="hidden sm:block h-full col-span-2 border-b border-white border-opacity-10 border-r"
@@ -128,7 +135,10 @@ export const Hero = () => {
         <div className="col-start-2 col-span-6 sm:col-start-0 sm:col-span-6 h-full min-h-16 border-white border-opacity-10 border-b border-l border-r relative flex justify-center py-4 px-8">
           <Stars />
           <p className="text-lg font-extralight">
-            A passionate full-stack engineer with 6+ years of experience building modern & highly scalable web apps and services.
+            <Balancer>
+              A passionate full-stack engineer with 6+ years of experience
+              building modern & highly scalable web apps and services.
+            </Balancer>
           </p>
         </div>
         <div className="hidden sm:block h-full border-white border-opacity-10 border-b"></div>
@@ -136,7 +146,7 @@ export const Hero = () => {
           className="hidden sm:block col-span-2 h-full border-white border-opacity-10 border-b border-l"
           style={toRight}
         ></div>
-        
+
         {/* 5th row */}
         <div
           className="hidden sm:block h-full col-span-2 border-white border-opacity-10 border-r"
