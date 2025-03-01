@@ -1,9 +1,9 @@
 import { AnimateOnScroll } from "./animate-on-scroll";
 import { FlatCard } from "./glowing-card";
-import experiencesData from "../data/portfolio.json";
+import { portfolioData } from "../data/portfolio";
 
 export const Experiences = () => {
-  const { experiences } = experiencesData;
+  const { experiences } = portfolioData;
 
   return (
     <AnimateOnScroll id="experiences">

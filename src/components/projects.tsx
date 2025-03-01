@@ -2,29 +2,9 @@ import React from "react";
 import { AnimateOnScroll } from "./animate-on-scroll";
 import { FlatCard } from "./glowing-card";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
-
-// Import portfolio data
-import portfolioData from "../data/portfolio.json";
-
-// Project data structure
-interface Project {
-  title: string;
-  description: string;
-  technologies: string[];
-  link?: string;
-  githubLink?: string;
-  image?: string;
-  featured?: boolean;
-  keyHighlights?: string[];
-}
-
-// Get projects from the imported JSON file
-const projectsData = portfolioData.projects as Project[];
+import { portfolioData, type Project } from "../data/portfolio";
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
-  // Handle project with name instead of title
-  const projectTitle = project.title || "Project";
-
   return (
     <div className="group relative">
       <FlatCard
@@ -42,7 +22,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
           <div className="w-full h-40 overflow-hidden mb-4 rounded-sm bg-white/5 relative">
             <img
               src={project.image}
-              alt={`${projectTitle} thumbnail`}
+              alt={`${project.title} thumbnail`}
               className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               decoding="async"
               loading="lazy"
@@ -57,7 +37,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
 
         <div className="flex-1">
           <h3 className="text-xl text-white font-medium mb-2">
-            {projectTitle}
+            {project.title}
           </h3>
           <p className="text-gray-400 mb-4 text-sm">{project.description}</p>
         </div>
@@ -82,7 +62,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-violet-400 transition-colors flex items-center gap-1 text-sm"
-                  aria-label={`View ${projectTitle} project`}
+                  aria-label={`View ${project.title} project`}
                 >
                   <FiExternalLink /> Live
                 </a>
@@ -93,7 +73,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-violet-400 transition-colors flex items-center gap-1 text-sm"
-                  aria-label={`GitHub repository for ${projectTitle}`}
+                  aria-label={`GitHub repository for ${project.title}`}
                 >
                   <FiGithub /> GitHub
                 </a>
@@ -107,8 +87,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
 };
 
 export const Projects: React.FC = () => {
-  // Filter and sort projects (featured first, then by recency if possible)
-  const sortedProjects = [...projectsData].sort(
+  const sortedProjects = [...portfolioData.projects].sort(
     (a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0)
   );
 
@@ -117,7 +96,9 @@ export const Projects: React.FC = () => {
       <div className="w-full mx-auto px-4 py-16">
         <div className="flex items-center justify-center mb-12">
           <div className="h-px w-12 bg-violet-500/50 mr-4"></div>
-          <h2 className="text-3xl font-semibold text-white text-center">Projects</h2>
+          <h2 className="text-3xl font-semibold text-white text-center">
+            Projects
+          </h2>
           <div className="h-px w-12 bg-violet-500/50 ml-4"></div>
         </div>
 

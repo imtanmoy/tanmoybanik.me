@@ -2,21 +2,7 @@ import React from "react";
 import { AnimateOnScroll } from "./animate-on-scroll";
 import { FlatCard } from "./glowing-card";
 import { FiAward } from "react-icons/fi";
-
-// Import portfolio data
-import portfolioData from "../data/portfolio.json";
-
-// Award data structure
-interface Award {
-  title: string;
-  organization: string;
-  description: string;
-  year: string;
-  logo?: string;
-}
-
-// Get awards from the imported JSON file
-const awardsData = portfolioData.awards as Award[];
+import { portfolioData, type Award } from "../data/portfolio";
 
 const AwardCard: React.FC<{ award: Award }> = ({ award }) => {
   return (
@@ -54,7 +40,7 @@ const AwardCard: React.FC<{ award: Award }> = ({ award }) => {
 };
 
 export const Awards: React.FC = () => {
-  const sortedAwards = [...awardsData].sort(
+  const sortedAwards = [...portfolioData.awards].sort(
     (a, b) => parseInt(b.year) - parseInt(a.year)
   );
 
@@ -63,7 +49,9 @@ export const Awards: React.FC = () => {
       <div className="w-full mx-auto px-4 py-16">
         <div className="flex items-center justify-center mb-12">
           <div className="h-px w-12 bg-violet-500/50 mr-4"></div>
-          <h2 className="text-3xl font-semibold text-white text-center">Awards</h2>
+          <h2 className="text-3xl font-semibold text-white text-center">
+            Awards
+          </h2>
           <div className="h-px w-12 bg-violet-500/50 ml-4"></div>
         </div>
 

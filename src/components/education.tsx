@@ -1,7 +1,7 @@
 import React from "react";
-import portfolioData from "../data/portfolio.json";
 import { AnimateOnScroll } from "./animate-on-scroll";
 import { FlatCard } from "./glowing-card";
+import { portfolioData } from "../data/portfolio";
 
 export const Education: React.FC = () => {
   const { education, certifications } = portfolioData;
