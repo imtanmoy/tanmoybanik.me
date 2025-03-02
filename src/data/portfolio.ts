@@ -35,9 +35,11 @@ export interface Award {
   logo?: string;
 }
 
-export interface Certification {
+export interface Certificate {
   name: string;
   issuer: string;
+  date: string;
+  url: string;
 }
 
 export interface PortfolioData {
@@ -46,7 +48,7 @@ export interface PortfolioData {
   education: Education[];
   projects: Project[];
   awards: Award[];
-  certifications: Certification[];
+  certificates: Certificate[];
 }
 
 // Utility function to check if an object has required properties
@@ -77,7 +79,7 @@ const validatePortfolioData = (data: unknown): PortfolioData => {
     "education",
     "projects",
     "awards",
-    "certifications",
+    "certificates",
   ]);
 
   if (!hasMainSections) {
@@ -91,7 +93,7 @@ const validatePortfolioData = (data: unknown): PortfolioData => {
     !Array.isArray(data.education) ||
     !Array.isArray(data.projects) ||
     !Array.isArray(data.awards) ||
-    !Array.isArray(data.certifications)
+    !Array.isArray(data.certificates)
   ) {
     throw new Error("All portfolio sections must be arrays");
   }
@@ -167,9 +169,9 @@ const validatePortfolioData = (data: unknown): PortfolioData => {
   });
 
   // Validate certifications
-  data.certifications.forEach((cert, index) => {
-    const requiredProps: (keyof Certification)[] = ["name", "issuer"];
-    if (!hasRequiredProperties<Certification>(cert, requiredProps)) {
+  data.certificates.forEach((cert, index) => {
+    const requiredProps: (keyof Certificate)[] = ["name", "issuer"];
+    if (!hasRequiredProperties<Certificate>(cert, requiredProps)) {
       throw new Error(
         `Certification at index ${index} is missing required properties`
       );

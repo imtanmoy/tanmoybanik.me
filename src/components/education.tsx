@@ -4,7 +4,7 @@ import { FlatCard } from "./glowing-card";
 import { portfolioData } from "../data/portfolio";
 
 export const Education: React.FC = () => {
-  const { education, certifications } = portfolioData;
+  const { education, certificates } = portfolioData;
 
   return (
     <AnimateOnScroll id="education">
@@ -17,31 +17,37 @@ export const Education: React.FC = () => {
           <div className="h-px w-12 bg-violet-500/50 ml-4"></div>
         </div>
 
-        {/* Formal Education */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 max-w-5xl mx-auto">
           {education.map((item, index) => (
-            <FlatCard key={index}>
-              <h3 className="text-xl text-white font-medium mb-2">
-                {item.degree}
-              </h3>
-              <p className="text-violet-400 mb-1">{item.institution}</p>
-              <p className="text-gray-400 mb-2">{item.year}</p>
+            <FlatCard key={index} className="gap-1">
+              <h3 className="text-xl text-white font-medium">{item.degree}</h3>
+              <span className="text-violet-400">{item.institution}</span>
+              <span className="text-gray-400">{item.location}</span>
+              <span className="text-gray-400">{item.year}</span>
             </FlatCard>
           ))}
         </div>
 
-        {/* Professional Development */}
         <div className="mt-10">
           <h3 className="text-2xl text-white font-medium mb-6 text-center">
             Professional Development
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
-            {certifications.map((cert, index) => (
-              <FlatCard key={index} className="p-4">
-                <p className="text-white text-sm font-medium mb-1">
+            {certificates.map((cert, index) => (
+              <FlatCard key={index} className="p-4 gap-1">
+                <span className="text-white text-sm font-medium">
                   {cert.name}
-                </p>
-                <p className="text-violet-400 text-xs">{cert.issuer}</p>
+                </span>
+                <span className="text-violet-400 text-xs">{cert.issuer}</span>
+                <span className="text-gray-400 text-xs">{cert.date}</span>
+                <a
+                  href={cert.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-violet-400 text-xs"
+                >
+                  View Credential
+                </a>
               </FlatCard>
             ))}
           </div>
