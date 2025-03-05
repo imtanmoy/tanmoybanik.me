@@ -23,7 +23,7 @@
         "Redis",
         "MSSQL"
       ],
-      "image": "/images/dms.png",
+      "image": "/images/dms.avif",
       "link": ""
     },
     {
@@ -40,7 +40,7 @@
         "Docker",
         "AWS"
       ],
-      "image": "/images/nlq.png"
+      "image": "/images/nlq.avif"
     },
     {
       "title": "Healthcare Practice Management Platform",
@@ -56,7 +56,7 @@
         "Material-UI",
         "Redis"
       ],
-      "image": "/images/ease.jpeg",
+      "image": "/images/ease.avif",
       "link": "https://easepractice.com"
     },
     {
@@ -74,7 +74,7 @@
         "MQTT",
         "WebAuthn"
       ],
-      "image": "/images/pinwheel.png",
+      "image": "/images/pinwheel.avif",
       "link": "https://pinwheel.com"
     },
     {
@@ -82,7 +82,7 @@
       "description": "A decentralized and encrypted storage layer built with IPFS / Filecoin, enabling secure file sharing. Designed to back up valuable NFTs and digital assets with enhanced privacy and security.",
       "technologies": ["React", "IPFS", "Node", "AWS", "TypeScript"],
       "link": "https://dolpin.io",
-      "image": "/images/dolpin-bg.png"
+      "image": "/images/dolpin-bg.avif"
     }
   ],
   "awards": [
@@ -91,21 +91,21 @@
       "organization": "Cramstack",
       "description": "Power analytics for Bangladesh's power ministry (Big Data).",
       "year": "2019",
-      "logo": "/images/logo-ict.png"
+      "logo": "/images/logo-ict.avif"
     },
     {
       "title": "Rockstart AI Accelerator",
       "organization": "Cramstack",
       "description": "Search-driven data analytics platform (Netherlands Batch 2).",
       "year": "2018",
-      "logo": "/images/logo-rock-start.png"
+      "logo": "/images/logo-rock-start.avif"
     },
     {
       "title": "Echelon 100 National Champion",
       "organization": "Cramstack",
       "description": "Search-driven data analytics (NLQ) platform (Singapore).",
       "year": "2018",
-      "logo": "/images/logo-e27.png"
+      "logo": "/images/logo-e27.avif"
     }
   ],
   "education": [
