@@ -76,6 +76,13 @@
       ],
       "image": "/images/pinwheel.png",
       "link": "https://pinwheel.com"
+    },
+    {
+      "title": "Dolpin",
+      "description": "A decentralized and encrypted storage layer built with IPFS / Filecoin, enabling secure file sharing. Designed to back up valuable NFTs and digital assets with enhanced privacy and security.",
+      "technologies": ["React", "IPFS", "Node", "AWS", "TypeScript"],
+      "link": "https://dolpin.io",
+      "image": "/images/dolpin-bg.png"
     }
   ],
   "awards": [
