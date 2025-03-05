@@ -235,6 +235,61 @@
       ]
     },
     {
+      "company": "Cramstack Ltd.",
+      "position": "Senior Software Engineer",
+      "location": "Dhaka, Bangladesh",
+      "startDate": "Jun 2019",
+      "endDate": "Dec 2019",
+      "highlights": [
+        "Decoupled a monolithic application into independent services using RabbitMQ",
+        "Created a framework for context-based NLQ (Natural Language Query) suggestions using Python",
+        "Converted and managed services using Docker and Docker Compose",
+        "Developed a centralized logging system with Elasticsearch, Logstash, and Kibana (ELK)",
+        "Collaborated with the data science team to optimize query processing algorithms",
+        "Developed a Java Spring Boot service to retrieve database metadata, improving SQL database compatibility"
+      ],
+      "technologies": [
+        "Python",
+        "Flask",
+        "Java",
+        "Spring Boot",
+        "RabbitMQ",
+        "Docker",
+        "Docker Compose",
+        "ELK Stack",
+        "CI/CD",
+        "Google Cloud Platform"
+      ]
+    },
+    {
+      "company": "Cramstack Ltd.",
+      "position": "Software Engineer",
+      "location": "Dhaka, Bangladesh",
+      "startDate": "May 2018",
+      "endDate": "May 2019",
+      "highlights": [
+        "Built APIs to summarize datasets and retrieve database information for the NLQ product",
+        "Developed UI components and interactive charts with Plotly.js and D3.js and React",
+        "Optimized large datasets for smooth performance and efficient memory usage",
+        "Optimized data processing and background tasks, ensuring timely updates of database summaries",
+        "Enhanced the NLQ system by implementing new query patterns",
+        "Expanded supported data types and visualizations for the analytics platform"
+      ],
+      "technologies": [
+        "React",
+        "Redux",
+        "D3.js",
+        "Plotly.js",
+        "Django",
+        "MySQL",
+        "Flask",
+        "Celery",
+        "Redis",
+        "Python",
+        "Google Cloud Platform"
+      ]
+    },
+    {
       "company": "Dreamerz Lab Ltd.",
       "position": "Full Stack Engineer",
       "location": "Dhaka, Bangladesh",
