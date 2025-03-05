@@ -102,7 +102,7 @@ export const Projects: React.FC = () => {
           <div className="h-px w-12 bg-violet-500/50 ml-4"></div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-6xl mx-auto">
           {sortedProjects.map((project, index) => (
             <ProjectCard key={index} project={project} />
           ))}
