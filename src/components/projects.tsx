@@ -3,20 +3,17 @@ import { AnimateOnScroll } from "./animate-on-scroll";
 import { FlatCard } from "./glowing-card";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 import { portfolioData, type Project } from "../data/portfolio";
+import { cn } from "../utils/cn";
 
-const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
+interface Props extends React.HTMLAttributes<HTMLDivElement> {
+  project: Project;
+}
+
+const ProjectCard = ({ project, className, ...props }: Props) => {
   return (
-    <div className="group relative">
+    <div className={cn("group relative", className)} {...props}>
       <FlatCard
-        className={`
-        flex flex-col h-full transition-all duration-300 
-        ${
-          project.featured
-            ? "border-violet-500/40 hover:border-violet-500/60"
-            : "border-violet-500/20 hover:border-violet-500/40"
-        }
-        relative overflow-hidden
-      `}
+        className={`flex flex-col h-full transition-all duration-300 relative overflow-hidden`}
       >
         {project.image && (
           <div className="w-full h-40 overflow-hidden mb-4 rounded-sm bg-white/5 relative">
@@ -27,11 +24,6 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
               decoding="async"
               loading="lazy"
             />
-            {project.featured && (
-              <span className="absolute top-2 right-2 px-2 py-0.5 bg-violet-900/50 text-violet-400 text-xs rounded-full">
-                Featured
-              </span>
-            )}
           </div>
         )}
 
@@ -87,13 +79,11 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
 };
 
 export const Projects: React.FC = () => {
-  const sortedProjects = [...portfolioData.projects].sort(
-    (a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0)
-  );
+  const sortedProjects = [...portfolioData.projects];
 
   return (
     <AnimateOnScroll id="projects">
-      <div className="w-full mx-auto px-4 py-16">
+      <div className="w-full px-4 py-16">
         <div className="flex items-center justify-center mb-12">
           <div className="h-px w-12 bg-violet-500/50 mr-4"></div>
           <h2 className="text-3xl font-semibold text-white text-center">
@@ -101,10 +91,13 @@ export const Projects: React.FC = () => {
           </h2>
           <div className="h-px w-12 bg-violet-500/50 ml-4"></div>
         </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div className="flex flex-wrap justify-center max-w-6xl mx-auto gap-4">
           {sortedProjects.map((project, index) => (
-            <ProjectCard key={index} project={project} />
+            <ProjectCard
+              key={index}
+              project={project}
+              className="w-full sm:w-1/2 md:w-1/3"
+            />
           ))}
         </div>
       </div>

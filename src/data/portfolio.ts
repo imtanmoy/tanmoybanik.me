@@ -24,7 +24,6 @@ export interface Project {
   image?: string;
   link?: string;
   githubLink?: string;
-  featured?: boolean;
 }
 
 export interface Award {

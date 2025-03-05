@@ -1,7 +1,6 @@
 import React from "react";
 import { AnimateOnScroll } from "./animate-on-scroll";
 import { FlatCard } from "./glowing-card";
-import { FiAward } from "react-icons/fi";
 import { portfolioData, type Award } from "../data/portfolio";
 
 const AwardCard: React.FC<{ award: Award }> = ({ award }) => {
@@ -29,11 +28,6 @@ const AwardCard: React.FC<{ award: Award }> = ({ award }) => {
         </div>
 
         <p className="text-gray-400 text-sm mb-2">{award.description}</p>
-
-        <div className="flex items-center text-violet-400 text-xs mt-2">
-          <FiAward className="mr-2" />
-          <span>Award Recipient</span>
-        </div>
       </div>
     </FlatCard>
   );
