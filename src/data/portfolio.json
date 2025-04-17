@@ -159,7 +159,7 @@
         "Built full-stack apps with React, React Native, Node.js, Nest.js, and PostgreSQL",
         "Integrated WebAuthn and biometric-based login for web and React Native projects",
         "Developed a RabbitMQ-based service for real-time mobile device updates via MQTT protocol",
-        "Implemented unit and integration tests using various frameworks",
+        "Implemented unit and integration tests using Vitest, Jest, Mocha, Chai, and Cypress",
         "Architected microservices using AWS ECS, Docker, and PostgreSQL",
         "Created comprehensive CI/CD pipelines using GitHub Actions"
       ],
@@ -187,7 +187,7 @@
       "highlights": [
         "Designed and developed high-performance Node.js microservices using NestJS framework and AWS Lambda",
         "Developed UI using React with a focus on performance and user experience",
-        "Optimized Node.js serverless functions, reducing cold start times",
+        "Optimized Node.js serverless functions, reducing cold start times and improving performance",
         "Developed an embedded banking solution integrating partner bank APIs",
         "Architected automated SSL certificate generation, reducing manual configuration time by 80%",
         "Optimized CI/CD pipelines, decreasing deployment times by 50%",
