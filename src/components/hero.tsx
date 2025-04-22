@@ -136,7 +136,7 @@ export const Hero = () => {
           <Stars />
           <p className="text-lg font-extralight">
             <Balancer>
-              A passionate full-stack engineer with 6+ years of experience
+              A passionate full-stack engineer with 7+ years of experience
               building modern & highly scalable web apps and services.
             </Balancer>
           </p>
