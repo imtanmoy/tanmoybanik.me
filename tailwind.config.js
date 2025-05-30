@@ -1,9 +1,9 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: ["./src/**/*.{astro,html,js,jsx,ts,tsx}"],
+module.exports = {
+  content: ["./app/**/*.{js,ts,jsx,tsx,mdx}", "./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
-      colors:{
+      colors: {
         primary_bg: "#1A1A1A",
         primary_text: "#FFFFFF",
         secondary_text: "#A6A6A6",
