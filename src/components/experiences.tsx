@@ -1,6 +1,7 @@
 import { AnimateOnScroll } from "./animate-on-scroll";
 import { FlatCard } from "./glowing-card";
 import { portfolioData } from "../data/portfolio";
+import { TechnologyBadge } from "../utils/icon-mapping";
 
 export const Experiences = () => {
   const { experiences } = portfolioData;
@@ -55,12 +56,7 @@ export const Experiences = () => {
 
                 <div className="flex flex-wrap gap-2">
                   {exp.technologies.map((tech, techIdx) => (
-                    <span
-                      key={techIdx}
-                      className="bg-zinc-800/30 text-zinc-200 text-xs px-2 py-1 rounded-full border border-zinc-700/50"
-                    >
-                      {tech}
-                    </span>
+                    <TechnologyBadge key={techIdx} technology={tech} />
                   ))}
                 </div>
               </div>

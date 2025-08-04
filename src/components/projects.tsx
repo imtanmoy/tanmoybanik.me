@@ -4,6 +4,7 @@ import { FlatCard } from "./glowing-card";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 import { portfolioData, type Project } from "../data/portfolio";
 import { cn } from "../utils/cn";
+import { TechnologyBadge } from "../utils/icon-mapping";
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   project: Project;
@@ -37,12 +38,7 @@ const ProjectCard = ({ project, className, ...props }: Props) => {
         <div className="mt-auto">
           <div className="flex flex-wrap gap-2 mb-3">
             {project.technologies.map((tech, index) => (
-              <span
-                key={index}
-                className="px-2 py-0.5 bg-zinc-800/30 text-zinc-200 text-xs rounded-full border border-zinc-700/50"
-              >
-                {tech}
-              </span>
+              <TechnologyBadge key={index} technology={tech} className="py-0.5" />
             ))}
           </div>
 

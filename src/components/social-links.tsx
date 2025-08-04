@@ -1,36 +1,30 @@
 import React from 'react';
-import { AiOutlineFilePdf } from 'react-icons/ai';
-import { FiGithub, FiLinkedin, FiMail, FiTwitter } from 'react-icons/fi';
+import { getTechnologyIcon } from '../utils/icon-mapping';
 
 const socialLinks = [
   {
     name: 'GitHub',
     href: 'https://github.com/imtanmoy',
-    icon: FiGithub,
     label: 'GitHub'
   },
   {
     name: 'LinkedIn',
     href: 'https://www.linkedin.com/in/imtanmoybanik/',
-    icon: FiLinkedin,
     label: 'LinkedIn'
   },
   {
-    name: 'Twitter',
+    name: 'X',
     href: 'https://twitter.com/Tanmoy_Banik',
-    icon: FiTwitter,
-    label: 'Twitter'
+    label: 'X'
   },
   {
     name: 'Email',
     href: 'mailto:imtanmoybanik@gmail.com',
-    icon: FiMail,
     label: 'Email'
   },
   {
     name: 'Resume',
     href: 'https://drive.google.com/file/d/1iqze1eHEopeTrmkYsBRFDiDVAI2u1g8c/view?usp=sharing',
-    icon: AiOutlineFilePdf,
     label: 'Resume'
   }
 ];
@@ -39,18 +33,20 @@ export const SocialLinks: React.FC = () => {
   return (
     <div className="flex flex-wrap items-center justify-center gap-3">
       {socialLinks.map((link) => {
-        const Icon = link.icon;
+        const { icon, color } = getTechnologyIcon(link.name);
         return (
           <a
             key={link.name}
             href={link.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 bg-zinc-800/30 text-zinc-200 rounded-full text-sm border border-zinc-700/50 hover:bg-emerald-500/10 hover:text-emerald-300 hover:border-emerald-500/30 transition-all duration-300"
+            className="flex items-center gap-2 px-4 py-2 bg-zinc-800/30 text-zinc-200 rounded-full text-sm border border-zinc-700/50 hover:bg-zinc-700/40 hover:border-zinc-600/50 transition-all duration-300 group"
             aria-label={link.label}
           >
-            <Icon className="text-lg" />
-            <span className="font-medium">{link.label}</span>
+            <span className={`text-lg transition-colors duration-300 ${color} group-hover:opacity-80`}>
+              {icon}
+            </span>
+            <span className="font-medium group-hover:text-white transition-colors duration-300">{link.label}</span>
           </a>
         );
       })}
