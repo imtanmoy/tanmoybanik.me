@@ -2,60 +2,58 @@ import React from 'react';
 import { AiOutlineFilePdf } from 'react-icons/ai';
 import { FiGithub, FiLinkedin, FiMail, FiTwitter } from 'react-icons/fi';
 
-const classNames = {
-  anchor:
-    'flex items-center justify-center cursor-pointer text-[#6e6e73] hover:text-pink-700 transition-colors duration-300 ease-in-out',
-  icon: 'text-2xl',
-};
+const socialLinks = [
+  {
+    name: 'GitHub',
+    href: 'https://github.com/imtanmoy',
+    icon: FiGithub,
+    label: 'GitHub'
+  },
+  {
+    name: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/imtanmoybanik/',
+    icon: FiLinkedin,
+    label: 'LinkedIn'
+  },
+  {
+    name: 'Twitter',
+    href: 'https://twitter.com/Tanmoy_Banik',
+    icon: FiTwitter,
+    label: 'Twitter'
+  },
+  {
+    name: 'Email',
+    href: 'mailto:imtanmoybanik@gmail.com',
+    icon: FiMail,
+    label: 'Email'
+  },
+  {
+    name: 'Resume',
+    href: 'https://drive.google.com/file/d/1iqze1eHEopeTrmkYsBRFDiDVAI2u1g8c/view?usp=sharing',
+    icon: AiOutlineFilePdf,
+    label: 'Resume'
+  }
+];
 
 export const SocialLinks: React.FC = () => {
   return (
-    <div className="flex items-center justify-center gap-x-8">
-      <a
-        href="https://github.com/imtanmoy"
-        target="_blank"
-        rel="noopener noreferrer"
-        className={classNames.anchor}
-        aria-label="GitHub"
-      >
-        <FiGithub className={classNames.icon} />
-      </a>
-      <a
-        href="https://www.linkedin.com/in/imtanmoybanik/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className={classNames.anchor}
-        aria-label="LinkedIn"
-      >
-        <FiLinkedin className={classNames.icon} />
-      </a>
-      <a
-        href="https://twitter.com/Tanmoy_Banik"
-        target="_blank"
-        rel="noopener noreferrer"
-        className={classNames.anchor}
-        aria-label="Twitter"
-      >
-        <FiTwitter className={classNames.icon} />
-      </a>
-      <a
-        href="mailto:imtanmoybanik@gmail.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        className={classNames.anchor}
-        aria-label="Email"
-      >
-        <FiMail className={classNames.icon} />
-      </a>
-      <a
-        href="https://drive.google.com/file/d/1iqze1eHEopeTrmkYsBRFDiDVAI2u1g8c/view?usp=sharing"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Resume"
-        className={classNames.anchor}
-      >
-        <AiOutlineFilePdf className={classNames.icon} />
-      </a>
+    <div className="flex flex-wrap items-center justify-center gap-3">
+      {socialLinks.map((link) => {
+        const Icon = link.icon;
+        return (
+          <a
+            key={link.name}
+            href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-4 py-2 bg-zinc-800/30 text-zinc-200 rounded-full text-sm border border-zinc-700/50 hover:bg-emerald-500/10 hover:text-emerald-300 hover:border-emerald-500/30 transition-all duration-300"
+            aria-label={link.label}
+          >
+            <Icon className="text-lg" />
+            <span className="font-medium">{link.label}</span>
+          </a>
+        );
+      })}
     </div>
   );
 };
