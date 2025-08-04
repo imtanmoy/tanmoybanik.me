@@ -41,6 +41,10 @@ export interface Certificate {
   url: string;
 }
 
+export interface Skills {
+  [category: string]: string[];
+}
+
 export interface PortfolioData {
   about: string[];
   experiences: Experience[];
@@ -48,7 +52,10 @@ export interface PortfolioData {
   projects: Project[];
   awards: Award[];
   certificates: Certificate[];
+  skills: Skills;
 }
+
+
 
 // Utility function to check if an object has required properties
 const hasRequiredProperties = <T>(
@@ -176,6 +183,11 @@ const validatePortfolioData = (data: unknown): PortfolioData => {
       );
     }
   });
+
+  // Validate skills
+  if (!data.skills || typeof data.skills !== "object" || data.skills === null) {
+    throw new Error("Skills section must be an object");
+  }
 
   return data;
 };

@@ -302,5 +302,19 @@
       ],
       "technologies": ["MEAN Stack", "Laravel", "IONIC", "Mobile Development"]
     }
-  ]
+  ],
+  "skills": {
+    "Programming Languages": ["JavaScript", "TypeScript", "Python", "Java"],
+    "Libraries & Frameworks": [
+      "React",
+      "Node.js",
+      "NestJS",
+      "Flask",
+      "Spring Boot"
+    ],
+    "Databases": ["PostgreSQL", "MySQL", "MongoDB", "MSSQL"],
+    "DevOps": ["Docker", "AWS", "GitHub Actions", "CI/CD"],
+    "Tools": ["RabbitMQ", "MQTT", "Redis", "Elasticsearch"],
+    "Testing": ["Vitest", "Jest", "Mocha", "Chai", "Cypress"]
+  }
 }
