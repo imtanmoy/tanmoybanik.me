@@ -304,17 +304,63 @@
     }
   ],
   "skills": {
-    "Programming Languages": ["JavaScript", "TypeScript", "Python", "Java"],
-    "Libraries & Frameworks": [
-      "React",
-      "Node.js",
-      "NestJS",
-      "Flask",
-      "Spring Boot"
+    "Programming Languages": [
+      "JavaScript",
+      "TypeScript",
+      "Python",
+      "Java",
+      "Golang",
+      "PHP",
+      "SQL"
     ],
-    "Databases": ["PostgreSQL", "MySQL", "MongoDB", "MSSQL"],
-    "DevOps": ["Docker", "AWS", "GitHub Actions", "CI/CD"],
-    "Tools": ["RabbitMQ", "MQTT", "Redis", "Elasticsearch"],
-    "Testing": ["Vitest", "Jest", "Mocha", "Chai", "Cypress"]
+    "Back-end": [
+      "Node.js (NestJS, Express.js)",
+      "Serverless Framework",
+      "Spring Boot",
+      "FastAPI",
+      "Flask",
+      "Django",
+      "Laravel"
+    ],
+    "Front-end": [
+      "React.js",
+      "React Native",
+      "Next.js",
+      "Redux",
+      "GraphQL",
+      "Apollo GraphQL",
+      "REST APIs",
+      "Tailwind CSS",
+      "Expo",
+      "StoryBook"
+    ],
+    "Database": ["MongoDB", "MySQL", "PostgreSQL", "Redis"],
+    "DevOps & Cloud": [
+      "AWS (CloudFormation, CDK, ECS, Lambda)",
+      "Google Cloud Platform (GCP)",
+      "Docker",
+      "Nginx",
+      "GitHub Actions",
+      "CI/CD"
+    ],
+    "Testing Frameworks": [
+      "Vitest",
+      "Jest",
+      "Mocha",
+      "Chai",
+      "Supertest",
+      "Cypress"
+    ],
+    "Other Technologies": [
+      "RabbitMQ",
+      "MQTT",
+      "WebAuthn",
+      "Elasticsearch",
+      "Logstash",
+      "Kibana (ELK Stack)",
+      "Git",
+      "Microservices",
+      "Stripe"
+    ]
   }
 }
