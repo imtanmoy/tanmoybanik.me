@@ -40,13 +40,21 @@ export const SocialLinks: React.FC = () => {
             href={link.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 bg-zinc-800/30 text-zinc-200 rounded-full text-sm border border-zinc-700/50 hover:bg-zinc-700/40 hover:border-zinc-600/50 transition-all duration-300 group"
-            aria-label={link.label}
+            className="flex items-center gap-2 px-4 py-2 bg-zinc-800/30 text-zinc-200 rounded-full text-sm border border-zinc-700/50 hover:bg-zinc-700/40 hover:border-zinc-600/50 transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black"
+            aria-label={`${link.label}${link.href.startsWith('http') ? ' - Opens in new tab' : ''}`}
           >
-            <span className={`text-lg transition-colors duration-300 ${color} group-hover:opacity-80`}>
+            <span 
+              className={`text-lg transition-colors duration-300 ${color} group-hover:opacity-80`}
+              aria-hidden="true"
+            >
               {icon}
             </span>
-            <span className="font-medium group-hover:text-white transition-colors duration-300">{link.label}</span>
+            <span className="font-medium group-hover:text-white transition-colors duration-300">
+              {link.label}
+            </span>
+            {link.href.startsWith('http') && (
+              <span className="sr-only">(opens in new tab)</span>
+            )}
           </a>
         );
       })}

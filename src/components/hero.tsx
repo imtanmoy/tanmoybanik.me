@@ -112,7 +112,7 @@ export const Hero = () => {
         <div className="hidden sm:block h-full border-white border-opacity-10 border-b"></div>
         <div className="col-start-2 col-span-6 sm:col-start-0 sm:col-span-6 h-full min-h-16 border-white border-opacity-10 border-b border-l border-r relative flex items-start justify-center p-4">
           <Stars />
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold relative">
+          <h1 id="hero-heading" className="text-5xl md:text-6xl lg:text-7xl font-bold relative">
             <span className="text-emerald-400">Tan</span>
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 via-green-300 to-emerald-400">
               moy

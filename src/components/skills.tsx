@@ -37,7 +37,7 @@ export const Skills: React.FC = () => {
       <div className="w-full mx-auto px-4 py-12">
         <div className="flex items-center justify-center mb-4">
           <div className="h-px w-12 bg-emerald-500/50 mr-4"></div>
-          <h2 className="text-3xl font-semibold text-white text-center">
+          <h2 id="skills-heading" className="text-3xl font-semibold text-white text-center">
             Skills
           </h2>
           <div className="h-px w-12 bg-emerald-500/50 ml-4"></div>

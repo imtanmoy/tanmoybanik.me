@@ -15,6 +15,14 @@ export const AnimateOnScroll: React.FC<AnimateOnScrollProps> = ({
   const ref = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
+    // Check for reduced motion preference
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    
+    if (prefersReducedMotion) {
+      setIsVisible(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry && entry.isIntersecting) {

@@ -14,6 +14,13 @@ export const NavBar = () => {
   const [activeSection, setActiveSection] = useState("home");
   const [scrolled, setScrolled] = useState(false);
 
+  // Handle keyboard navigation for mobile menu
+  const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
+    if (e.key === 'Escape' && isOpen) {
+      setIsOpen(false);
+    }
+  }, [isOpen]);
+
   // Handle scroll to specific section with smooth behavior
   const handleScrollTo = useCallback(
     (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
@@ -84,6 +91,7 @@ export const NavBar = () => {
       }`}
       role="navigation"
       aria-label="Main navigation"
+      onKeyDown={handleKeyDown}
     >
       <div className="max-w-5xl mx-auto relative">
         {/* Desktop navigation */}
@@ -93,7 +101,7 @@ export const NavBar = () => {
               key={link.id}
               href={link.href}
               onClick={(e) => handleScrollTo(e, link.href)}
-              className={`px-3 py-2 rounded-md transition-colors ${
+              className={`px-3 py-2 rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black ${
                 activeSection === link.href.substring(1)
                   ? "text-emerald-400 font-bold"
                   : "text-gray-300 hover:text-emerald-400"
@@ -101,6 +109,7 @@ export const NavBar = () => {
               aria-current={
                 activeSection === link.href.substring(1) ? "page" : undefined
               }
+              tabIndex={0}
             >
               {link.text}
             </a>
@@ -122,12 +131,15 @@ export const NavBar = () => {
           {/* Single mobile menu button */}
           <button
             type="button"
-            className="p-2 text-gray-300 z-100"
+            className="p-2 text-gray-300 z-100 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black rounded-md"
             onClick={() => setIsOpen(!isOpen)}
             aria-expanded={isOpen}
             aria-controls="mobile-menu"
-            aria-label="Toggle navigation menu"
+            aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
           >
+            <span className="sr-only">
+              {isOpen ? "Close menu" : "Open menu"}
+            </span>
             {isOpen ? (
               <svg
                 className="w-6 h-6"
@@ -175,7 +187,7 @@ export const NavBar = () => {
                 key={link.id}
                 href={link.href}
                 onClick={(e) => handleScrollTo(e, link.href)}
-                className={`block px-3 py-2 rounded-md ${
+                className={`block px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black ${
                   activeSection === link.href.substring(1)
                     ? "bg-emerald-900/20 text-emerald-400 font-medium"
                     : "text-gray-300 hover:bg-emerald-900/20 hover:text-emerald-400"
@@ -183,6 +195,7 @@ export const NavBar = () => {
                 aria-current={
                   activeSection === link.href.substring(1) ? "page" : undefined
                 }
+                tabIndex={0}
               >
                 {link.text}
               </a>

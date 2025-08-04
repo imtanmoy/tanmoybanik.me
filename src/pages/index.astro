@@ -14,16 +14,32 @@ import { Skills } from "../components/skills";
 <Layout>
   <main
     class="flex min-h-screen flex-col font-inter bg-primary_bg text-primary_text"
+    id="main-content"
+    role="main"
   >
     <NavBar client:load />
     <div class="flex flex-col items-center justify-center">
-      <Hero client:load />
-      <About client:load />
-      <Skills client:load />
-      <Experiences client:load />
-      <Projects client:load />
-      <Awards client:load />
-      <Education client:load />
+      <section id="home" aria-labelledby="hero-heading">
+        <Hero client:load />
+      </section>
+      <section id="about" aria-labelledby="about-heading">
+        <About client:load />
+      </section>
+      <section id="skills" aria-labelledby="skills-heading">
+        <Skills client:load />
+      </section>
+      <section id="experiences" aria-labelledby="experiences-heading">
+        <Experiences client:load />
+      </section>
+      <section id="projects" aria-labelledby="projects-heading">
+        <Projects client:load />
+      </section>
+      <section id="awards" aria-labelledby="awards-heading">
+        <Awards client:load />
+      </section>
+      <section id="education" aria-labelledby="education-heading">
+        <Education client:load />
+      </section>
       <Footer />
     </div>
   </main>

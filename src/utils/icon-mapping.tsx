@@ -196,10 +196,18 @@ export const TechnologyBadge: React.FC<TechnologyBadgeProps> = ({
   const { icon, color } = getTechnologyIcon(technology);
   
   return (
-    <span className={`inline-flex items-center gap-1 bg-zinc-800/30 text-zinc-200 text-xs px-2 py-1 rounded-full border border-zinc-700/50 ${className}`}>
-      <span className={`text-sm ${color}`}>
+    <span 
+      className={`inline-flex items-center gap-1 bg-zinc-800/30 text-zinc-200 text-xs px-2 py-1 rounded-full border border-zinc-700/50 ${className}`}
+      role="img"
+      aria-label={`Technology: ${technology}`}
+    >
+      <span 
+        className={`text-sm ${color}`}
+        aria-hidden="true"
+      >
         {icon}
       </span>
+      <span className="sr-only">Technology badge for </span>
       {technology}
     </span>
   );

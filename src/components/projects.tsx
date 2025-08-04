@@ -20,7 +20,7 @@ const ProjectCard = ({ project, className, ...props }: Props) => {
           <div className="w-full h-40 overflow-hidden mb-4 rounded-sm bg-white/5 relative">
             <img
               src={project.image}
-              alt={`${project.title} thumbnail`}
+              alt={`Screenshot of ${project.title} project showing the user interface and key features`}
               className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               decoding="async"
               loading="lazy"
@@ -49,10 +49,12 @@ const ProjectCard = ({ project, className, ...props }: Props) => {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-emerald-400 transition-colors flex items-center gap-1 text-sm"
-                  aria-label={`View ${project.title} project`}
+                  className="text-gray-400 hover:text-emerald-400 transition-colors flex items-center gap-1 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black rounded"
+                  aria-label={`View ${project.title} project - Opens in new tab`}
                 >
-                  <FiExternalLink /> Live
+                  <FiExternalLink aria-hidden="true" /> 
+                  Live
+                  <span className="sr-only">(opens in new tab)</span>
                 </a>
               )}
               {project.githubLink && (
@@ -60,10 +62,12 @@ const ProjectCard = ({ project, className, ...props }: Props) => {
                   href={project.githubLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-emerald-400 transition-colors flex items-center gap-1 text-sm"
-                  aria-label={`GitHub repository for ${project.title}`}
+                  className="text-gray-400 hover:text-emerald-400 transition-colors flex items-center gap-1 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black rounded"
+                  aria-label={`GitHub repository for ${project.title} - Opens in new tab`}
                 >
-                  <FiGithub /> GitHub
+                  <FiGithub aria-hidden="true" /> 
+                  GitHub
+                  <span className="sr-only">(opens in new tab)</span>
                 </a>
               )}
             </div>
@@ -82,7 +86,7 @@ export const Projects: React.FC = () => {
       <div className="w-full px-4 py-16">
         <div className="flex items-center justify-center mb-12">
           <div className="h-px w-12 bg-emerald-500/50 mr-4"></div>
-          <h2 className="text-3xl font-semibold text-white text-center">
+          <h2 id="projects-heading" className="text-3xl font-semibold text-white text-center">
             Projects
           </h2>
           <div className="h-px w-12 bg-emerald-500/50 ml-4"></div>
