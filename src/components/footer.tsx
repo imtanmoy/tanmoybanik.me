@@ -10,7 +10,7 @@ export const Footer: React.FC = () => {
           href="https://www.linkedin.com/in/imtanmoybanik/"
           target="_blank"
           rel="noopener noreferrer"
-          className="cursor-pointer hover:scale-[120%] hover:text-violet-400 transition-all duration-300"
+          className="cursor-pointer hover:scale-[120%] hover:text-emerald-400 transition-all duration-300"
           aria-label="LinkedIn"
         >
           <FiLinkedin size={20} />
@@ -19,7 +19,7 @@ export const Footer: React.FC = () => {
           href="https://github.com/imtanmoy"
           target="_blank"
           rel="noopener noreferrer"
-          className="cursor-pointer hover:scale-[120%] hover:text-violet-400 transition-all duration-300"
+          className="cursor-pointer hover:scale-[120%] hover:text-emerald-400 transition-all duration-300"
           aria-label="GitHub"
         >
           <FiGithub size={20} />
@@ -28,7 +28,7 @@ export const Footer: React.FC = () => {
           href="mailto:imtanmoybanik@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="cursor-pointer hover:scale-[120%] hover:text-violet-400 transition-all duration-300"
+          className="cursor-pointer hover:scale-[120%] hover:text-emerald-400 transition-all duration-300"
           aria-label="Email"
         >
           <FiMail size={20} />
@@ -37,7 +37,7 @@ export const Footer: React.FC = () => {
           href="https://twitter.com/Tanmoy_Banik"
           target="_blank"
           rel="noopener noreferrer"
-          className="cursor-pointer hover:scale-[120%] hover:text-violet-400 transition-all duration-300"
+          className="cursor-pointer hover:scale-[120%] hover:text-emerald-400 transition-all duration-300"
           aria-label="Twitter"
         >
           <FiTwitter size={20} />

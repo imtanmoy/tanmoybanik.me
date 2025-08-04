@@ -39,21 +39,21 @@ const ProjectCard = ({ project, className, ...props }: Props) => {
             {project.technologies.map((tech, index) => (
               <span
                 key={index}
-                className="px-2 py-0.5 bg-black/50 text-violet-300 text-xs rounded-full border border-violet-500/20"
+                className="px-2 py-0.5 bg-zinc-800/30 text-zinc-200 text-xs rounded-full border border-zinc-700/50"
               >
                 {tech}
               </span>
             ))}
           </div>
 
-          <div className="flex gap-3 mt-2 pt-2 border-t border-violet-500/10 justify-between items-center">
+          <div className="flex gap-3 mt-2 pt-2 border-t border-emerald-500/10 justify-between items-center">
             <div className="flex gap-3">
               {project.link && (
                 <a
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-violet-400 transition-colors flex items-center gap-1 text-sm"
+                  className="text-gray-400 hover:text-emerald-400 transition-colors flex items-center gap-1 text-sm"
                   aria-label={`View ${project.title} project`}
                 >
                   <FiExternalLink /> Live
@@ -64,7 +64,7 @@ const ProjectCard = ({ project, className, ...props }: Props) => {
                   href={project.githubLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-violet-400 transition-colors flex items-center gap-1 text-sm"
+                  className="text-gray-400 hover:text-emerald-400 transition-colors flex items-center gap-1 text-sm"
                   aria-label={`GitHub repository for ${project.title}`}
                 >
                   <FiGithub /> GitHub
@@ -85,11 +85,11 @@ export const Projects: React.FC = () => {
     <AnimateOnScroll id="projects">
       <div className="w-full px-4 py-16">
         <div className="flex items-center justify-center mb-12">
-          <div className="h-px w-12 bg-violet-500/50 mr-4"></div>
+          <div className="h-px w-12 bg-emerald-500/50 mr-4"></div>
           <h2 className="text-3xl font-semibold text-white text-center">
             Projects
           </h2>
-          <div className="h-px w-12 bg-violet-500/50 ml-4"></div>
+          <div className="h-px w-12 bg-emerald-500/50 ml-4"></div>
         </div>
         <div className="flex flex-wrap justify-center max-w-6xl mx-auto gap-4">
           {sortedProjects.map((project, index) => (

@@ -11,12 +11,12 @@ export const BlinkingLight = () => {
           <linearGradient id="lightGradient" x1="0.5" x2="0.5" y1="0" y2="1">
             <stop
               offset="0"
-              stopColor="rgba(138, 43, 226, 0.62)"
+              stopColor="rgba(110, 231, 183, 0.62)"
               stopOpacity="0.62"
             ></stop>
             <stop
               offset="1"
-              stopColor="rgba(148, 87, 235, 0)"
+              stopColor="rgba(52, 211, 153, 0)"
               stopOpacity="0"
             ></stop>
           </linearGradient>

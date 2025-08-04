@@ -7,6 +7,13 @@ export default {
         primary_bg: "#1A1A1A",
         primary_text: "#FFFFFF",
         secondary_text: "#A6A6A6",
+        theme: {
+          primary: "#71717a",
+          secondary: "#52525b", 
+          accent: "#a1a1aa",
+          light: "#d4d4d8",
+          dark: "#3f3f46"
+        },
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],

@@ -55,10 +55,10 @@ export const ParticleAnimation = () => {
       },
       particles: {
         color: {
-          value: ["#8a2be2", "#9400d3"], // BlueViolet and DarkViolet
+          value: ["#6ee7b7", "#34d399"], // Sky-500 and Sky-600
         },
         links: {
-          color: "#7b68ee", // MediumSlateBlue
+          color: "#a7f3d0", // Sky-400
           distance: 20,
           enable: false,
           opacity: 0.1,

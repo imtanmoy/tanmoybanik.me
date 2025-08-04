@@ -9,11 +9,11 @@ export const Experiences = () => {
     <AnimateOnScroll id="experiences">
       <div className="w-full mx-auto px-4 py-16">
         <div className="flex items-center justify-center mb-12">
-          <div className="h-px w-12 bg-violet-500/50 mr-4"></div>
+          <div className="h-px w-12 bg-emerald-500/50 mr-4"></div>
           <h2 className="text-3xl font-semibold text-white text-center">
             Professional Experience
           </h2>
-          <div className="h-px w-12 bg-violet-500/50 ml-4"></div>
+          <div className="h-px w-12 bg-emerald-500/50 ml-4"></div>
         </div>
 
         <div className="grid grid-cols-1 gap-8 max-w-5xl mx-auto">
@@ -25,7 +25,7 @@ export const Experiences = () => {
                     <h3 className="text-xl text-white font-medium">
                       {exp.position}
                     </h3>
-                    <p className="text-violet-400 text-lg">
+                    <p className="text-zinc-300 text-lg">
                       {exp.company} | {exp.location}
                     </p>
                     <p className="text-gray-400 text-sm">
@@ -38,7 +38,7 @@ export const Experiences = () => {
                   {exp.highlights.map((highlight, idx) => (
                     <li key={idx} className="flex items-start">
                       <svg
-                        className="w-3 h-3 text-violet-500 mr-2 mt-1 flex-shrink-0"
+                        className="w-3 h-3 text-emerald-400 mr-2 mt-1 flex-shrink-0"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                       >
@@ -57,7 +57,7 @@ export const Experiences = () => {
                   {exp.technologies.map((tech, techIdx) => (
                     <span
                       key={techIdx}
-                      className="bg-violet-900/40 text-violet-300 text-xs px-2 py-1 rounded-full"
+                      className="bg-zinc-800/30 text-zinc-200 text-xs px-2 py-1 rounded-full border border-zinc-700/50"
                     >
                       {tech}
                     </span>

@@ -14,7 +14,7 @@ export const FlatCard: React.FC<FlatCardProps> = ({
     <div
       {...props}
       className={cn(
-        "border border-violet-500/20 bg-black/40 rounded-lg p-6 h-full flex flex-col",
+        "border border-emerald-500/20 bg-black/40 rounded-lg p-6 h-full flex flex-col",
         className
       )}
     >

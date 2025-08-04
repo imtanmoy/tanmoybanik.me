@@ -7,10 +7,10 @@ import { Balancer } from "react-wrap-balancer";
 const Stars = () => {
   return (
     <>
-      <div className="h-1.5 bg-[#8a2be2] p-0 m-0 absolute aspect-square rotate-45 -left-[3.5px] -top-[3.5px]"></div>
-      <div className="h-1.5 bg-[#8a2be2] p-0 m-0 absolute aspect-square rotate-45 -right-[3.5px] -top-[3.5px]"></div>
-      <div className="h-1.5 bg-[#8a2be2] p-0 m-0 absolute aspect-square rotate-45 -left-[3.5px] -bottom-[3.5px]"></div>
-      <div className="h-1.5 bg-[#8a2be2] p-0 m-0 absolute aspect-square rotate-45 -right-[3.5px] -bottom-[3.5px]"></div>
+      <div className="h-1.5 bg-[#6ee7b7] p-0 m-0 absolute aspect-square rotate-45 -left-[3.5px] -top-[3.5px]"></div>
+      <div className="h-1.5 bg-[#6ee7b7] p-0 m-0 absolute aspect-square rotate-45 -right-[3.5px] -top-[3.5px]"></div>
+      <div className="h-1.5 bg-[#6ee7b7] p-0 m-0 absolute aspect-square rotate-45 -left-[3.5px] -bottom-[3.5px]"></div>
+      <div className="h-1.5 bg-[#6ee7b7] p-0 m-0 absolute aspect-square rotate-45 -right-[3.5px] -bottom-[3.5px]"></div>
     </>
   );
 };
@@ -68,7 +68,7 @@ export const Hero = () => {
         </div>
         <div className="col-span-12 flex justify-center">
           <div
-            className="bg-violet-400 w-[316px] h-1 relative animate-pulse"
+            className="bg-emerald-400 w-[316px] h-1 relative animate-pulse"
             style={tubLight}
           ></div>
         </div>
@@ -113,11 +113,11 @@ export const Hero = () => {
         <div className="col-start-2 col-span-6 sm:col-start-0 sm:col-span-6 h-full min-h-16 border-white border-opacity-10 border-b border-l border-r relative flex items-start justify-center p-4">
           <Stars />
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold relative">
-            <span className="text-violet-500">Tan</span>
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-violet-500 via-purple-300 to-violet-500">
+            <span className="text-emerald-400">Tan</span>
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 via-green-300 to-emerald-400">
               moy
             </span>
-            <div className="absolute -inset-1 blur-sm bg-violet-500/20 rounded-lg -z-10"></div>
+            <div className="absolute -inset-1 blur-sm bg-emerald-500/20 rounded-lg -z-10"></div>
           </h1>
         </div>
         <div className="hidden sm:block h-full border-white border-opacity-10 border-b"></div>

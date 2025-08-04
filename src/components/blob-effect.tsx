@@ -54,7 +54,7 @@ export const BlobEffect = () => {
         style={{
           aspectRatio: "1",
           translate: "-50%, -50%",
-          background: "linear-gradient(to right, #8a2be2, #9400d3)",
+          background: "linear-gradient(to right, #6ee7b7, #34d399)",
           opacity: 0.1,
           willChange: "transform",
         }}

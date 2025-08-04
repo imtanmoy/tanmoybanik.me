@@ -95,8 +95,8 @@ export const NavBar = () => {
               onClick={(e) => handleScrollTo(e, link.href)}
               className={`px-3 py-2 rounded-md transition-colors ${
                 activeSection === link.href.substring(1)
-                  ? "text-violet-500 font-bold"
-                  : "text-gray-300 hover:text-violet-400"
+                  ? "text-emerald-400 font-bold"
+                  : "text-gray-300 hover:text-emerald-400"
               }`}
               aria-current={
                 activeSection === link.href.substring(1) ? "page" : undefined
@@ -114,7 +114,7 @@ export const NavBar = () => {
             className="text-xl font-bold"
             onClick={(e) => handleScrollTo(e, "#home")}
           >
-            <span className="text-violet-500">
+            <span className="text-emerald-400">
               {"<"}TB{"/>"}
             </span>
           </a>
@@ -177,8 +177,8 @@ export const NavBar = () => {
                 onClick={(e) => handleScrollTo(e, link.href)}
                 className={`block px-3 py-2 rounded-md ${
                   activeSection === link.href.substring(1)
-                    ? "bg-violet-900/40 text-violet-400 font-medium"
-                    : "text-gray-300 hover:bg-violet-900/30 hover:text-violet-400"
+                    ? "bg-emerald-900/20 text-emerald-400 font-medium"
+                    : "text-gray-300 hover:bg-emerald-900/20 hover:text-emerald-400"
                 }`}
                 aria-current={
                   activeSection === link.href.substring(1) ? "page" : undefined

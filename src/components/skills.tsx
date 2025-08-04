@@ -11,14 +11,14 @@ interface SkillCategoryProps {
 const SkillCategory: React.FC<SkillCategoryProps> = ({ category, skills, categoryId }) => {
   return (
     <div className="mb-4">
-      <h3 className="text-lg text-white font-medium mb-3 border-b border-violet-500/20 pb-2">
+      <h3 className="text-lg text-white font-medium mb-3 border-b border-emerald-500/30 pb-2">
         {category}
       </h3>
       <div className="flex flex-wrap gap-1.5">
         {skills.map((skill) => (
           <span
             key={`${categoryId}-${skill}`}
-            className="px-2.5 py-1 bg-violet-500/10 text-violet-400 rounded-md text-xs hover:bg-violet-500/20 transition-colors duration-200"
+            className="px-2.5 py-1 bg-zinc-800/30 text-zinc-200 rounded-md text-xs hover:bg-zinc-800/50 transition-colors duration-200 border border-zinc-700/50"
           >
             {skill}
           </span>
@@ -36,11 +36,11 @@ export const Skills: React.FC = () => {
     <AnimateOnScroll id={sectionId}>
       <div className="w-full mx-auto px-4 py-12">
         <div className="flex items-center justify-center mb-4">
-          <div className="h-px w-12 bg-violet-500/50 mr-4"></div>
+          <div className="h-px w-12 bg-emerald-500/50 mr-4"></div>
           <h2 className="text-3xl font-semibold text-white text-center">
             Skills
           </h2>
-          <div className="h-px w-12 bg-violet-500/50 ml-4"></div>
+          <div className="h-px w-12 bg-emerald-500/50 ml-4"></div>
         </div>
 
         <div className="text-center mb-6">
