@@ -175,9 +175,14 @@
         "MQTT",
         "WebAuthn",
         "AWS",
+        "AWS Lambda",
+        "AWS SQS",
         "Serverless Framework",
         "Docker",
-        "GitHub Actions"
+        "GitHub Actions",
+        "Vitest",
+        "Cypress",
+        "OpenAPI"
       ]
     },
     {
@@ -338,7 +343,7 @@
     ],
     "Database": ["MongoDB", "MySQL", "PostgreSQL", "Redis"],
     "DevOps & Cloud": [
-      "AWS (CloudFormation, CDK, ECS, Lambda)",
+      "AWS (CloudFormation, CDK)",
       "Google Cloud Platform (GCP)",
       "Docker",
       "Nginx",
@@ -360,6 +365,7 @@
       "Elasticsearch",
       "Logstash",
       "Kibana (ELK Stack)",
+      "OpenAPI",
       "Git",
       "Microservices",
       "Stripe"

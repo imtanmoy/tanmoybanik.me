@@ -120,6 +120,7 @@ export const technologyIconMap: Record<string, TechnologyIcon> = {
   "AWS": { icon: <SiAmazon />, color: "text-orange-500" },
   "AWS ECS": { icon: <SiAmazon />, color: "text-orange-500" },
   "AWS Lambda": { icon: <SiAmazon />, color: "text-orange-500" },
+  "AWS SQS": { icon: <SiAmazon />, color: "text-orange-500" },
   "AWS (CloudFormation, CDK, ECS, Lambda)": { icon: <SiAmazon />, color: "text-orange-500" },
   "Docker": { icon: <SiDocker />, color: "text-blue-400" },
   "Docker Compose": { icon: <SiDocker />, color: "text-blue-400" },
@@ -135,6 +136,7 @@ export const technologyIconMap: Record<string, TechnologyIcon> = {
   "Celery": { icon: <SiCelery />, color: "text-green-500" },
   
   // Testing & Monitoring
+  "Unit Testing": { icon: <TbTestPipe />, color: "text-blue-500" },
   "Vitest": { icon: <SiVitest />, color: "text-yellow-500" },
   "Jest": { icon: <SiJest />, color: "text-red-600" },
   "Mocha": { icon: <SiMocha />, color: "text-brown-600" },
@@ -151,6 +153,7 @@ export const technologyIconMap: Record<string, TechnologyIcon> = {
   "GraphQL": { icon: <SiGraphql />, color: "text-pink-500" },
   "Apollo GraphQL": { icon: <SiApollographql />, color: "text-blue-500" },
   "REST APIs": { icon: <TbApi />, color: "text-green-500" },
+  "OpenAPI": { icon: <TbApi />, color: "text-orange-600" },
   
   // Security & Authentication
   "WebAuthn": { icon: <TbShield />, color: "text-blue-600" },
