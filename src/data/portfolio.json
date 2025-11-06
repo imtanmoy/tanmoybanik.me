@@ -166,6 +166,7 @@
       "technologies": [
         "React",
         "React Native",
+        "Expo",
         "Node.js",
         "NestJS",
         "TypeScript",
@@ -173,7 +174,8 @@
         "RabbitMQ",
         "MQTT",
         "WebAuthn",
-        "AWS ECS",
+        "AWS",
+        "Serverless Framework",
         "Docker",
         "GitHub Actions"
       ]
