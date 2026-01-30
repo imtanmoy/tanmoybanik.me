@@ -1,5 +1,4 @@
 import React from "react";
-import { AnimateOnScroll } from "./animate-on-scroll";
 import { FlatCard } from "./glowing-card";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 import { portfolioData, type Project } from "../data/portfolio";
@@ -82,8 +81,7 @@ export const Projects: React.FC = () => {
   const sortedProjects = [...portfolioData.projects];
 
   return (
-    <AnimateOnScroll id="projects">
-      <div className="w-full px-4 py-16">
+    <div className="w-full px-4 py-16">
         <div className="flex items-center justify-center mb-12">
           <div className="h-px w-12 bg-emerald-500/50 mr-4"></div>
           <h2 id="projects-heading" className="text-3xl font-semibold text-white text-center">
@@ -100,8 +98,7 @@ export const Projects: React.FC = () => {
             />
           ))}
         </div>
-      </div>
-    </AnimateOnScroll>
+    </div>
   );
 };
 

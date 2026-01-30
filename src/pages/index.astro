@@ -9,6 +9,7 @@ import { Awards } from "../components/awards";
 import { Experiences } from "../components/experiences";
 import { ProfileSummary } from "../components/profile-summary";
 import { Skills } from "../components/skills";
+import { portfolioData } from "../data/portfolio";
 ---
 
 <Layout>
@@ -20,25 +21,25 @@ import { Skills } from "../components/skills";
     <NavBar client:load />
     <div class="flex flex-col items-center justify-center">
       <section id="home" aria-labelledby="hero-heading">
-        <Hero client:load />
+        <Hero client:load headline={portfolioData.headline} />
       </section>
       <section id="profile-summary" aria-labelledby="profile-summary-heading">
-        <ProfileSummary client:load />
+        <ProfileSummary />
       </section>
       <section id="skills" aria-labelledby="skills-heading">
-        <Skills client:load />
+        <Skills />
       </section>
       <section id="experiences" aria-labelledby="experiences-heading">
-        <Experiences client:load />
+        <Experiences />
       </section>
       <section id="projects" aria-labelledby="projects-heading">
-        <Projects client:load />
+        <Projects />
       </section>
       <section id="awards" aria-labelledby="awards-heading">
-        <Awards client:load />
+        <Awards />
       </section>
       <section id="education" aria-labelledby="education-heading">
-        <Education client:load />
+        <Education />
       </section>
       <Footer />
     </div>

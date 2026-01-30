@@ -1,4 +1,3 @@
-import { AnimateOnScroll } from "./animate-on-scroll";
 import { FlatCard } from "./glowing-card";
 import { portfolioData } from "../data/portfolio";
 import { TechnologyBadge } from "../utils/icon-mapping";
@@ -7,8 +6,7 @@ export const Experiences = () => {
   const { experiences } = portfolioData;
 
   return (
-    <AnimateOnScroll id="experiences">
-      <div className="w-full mx-auto px-4 py-16">
+    <div className="w-full mx-auto px-4 py-16">
         <div className="flex items-center justify-center mb-12">
           <div className="h-px w-12 bg-emerald-500/50 mr-4"></div>
           <h2 id="experiences-heading" className="text-3xl font-semibold text-white text-center">
@@ -63,7 +61,6 @@ export const Experiences = () => {
             </FlatCard>
           ))}
         </div>
-      </div>
-    </AnimateOnScroll>
+    </div>
   );
 };

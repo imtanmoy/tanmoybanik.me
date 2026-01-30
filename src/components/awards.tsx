@@ -1,5 +1,4 @@
-import React from "react";
-import { AnimateOnScroll } from "./animate-on-scroll";
+import type React from "react";
 import { FlatCard } from "./glowing-card";
 import { portfolioData, type Award } from "../data/portfolio";
 
@@ -39,8 +38,7 @@ export const Awards: React.FC = () => {
   );
 
   return (
-    <AnimateOnScroll id="awards">
-      <div className="w-full mx-auto px-4 py-16">
+    <div className="w-full mx-auto px-4 py-16">
         <div className="flex items-center justify-center mb-12">
           <div className="h-px w-12 bg-emerald-500/50 mr-4"></div>
           <h2 id="awards-heading" className="text-3xl font-semibold text-white text-center">
@@ -54,7 +52,6 @@ export const Awards: React.FC = () => {
             <AwardCard key={index} award={award} />
           ))}
         </div>
-      </div>
-    </AnimateOnScroll>
+    </div>
   );
 };

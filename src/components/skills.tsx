@@ -1,5 +1,4 @@
-import React, { useId } from "react";
-import { AnimateOnScroll } from "./animate-on-scroll";
+import React from "react";
 import { portfolioData } from "../data/portfolio";
 import { TechnologyBadge } from "../utils/icon-mapping";
 
@@ -30,11 +29,9 @@ const SkillCategory: React.FC<SkillCategoryProps> = ({ category, skills, categor
 
 export const Skills: React.FC = () => {
   const { skills } = portfolioData;
-  const sectionId = useId();
 
   return (
-    <AnimateOnScroll id={sectionId}>
-      <div className="w-full mx-auto px-4 py-12">
+    <div className="w-full mx-auto px-4 py-12">
         <div className="flex items-center justify-center mb-4">
           <div className="h-px w-12 bg-emerald-500/50 mr-4"></div>
           <h2 id="skills-heading" className="text-3xl font-semibold text-white text-center">
@@ -50,19 +47,15 @@ export const Skills: React.FC = () => {
         </div>
 
         <div className="flex flex-col gap-y-6 max-w-6xl mx-auto">
-          {Object.entries(skills).map(([category, skillList]) => {
-            const categoryId = `${sectionId}-${category}`;
-            return (
+          {Object.entries(skills).map(([category, skillList]) => (
               <SkillCategory
-                key={categoryId}
+                key={category}
                 category={category}
                 skills={skillList}
-                categoryId={categoryId}
+                categoryId={category}
               />
-            );
-          })}
+          ))}
         </div>
-      </div>
-    </AnimateOnScroll>
+    </div>
   );
 };

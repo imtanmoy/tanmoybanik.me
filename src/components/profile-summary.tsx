@@ -1,11 +1,9 @@
 import { portfolioData } from "../data/portfolio";
-import { AnimateOnScroll } from "./animate-on-scroll";
 import { Balancer, Provider } from "react-wrap-balancer";
 
 export const ProfileSummary = () => {
   return (
-    <AnimateOnScroll id="profile-summary">
-      <div
+    <div
         className="max-w-2xl lg:max-w-3xl text-white/50 font-light font-inter flex flex-col mx-auto justify-center text-center gap-4 mb-10 pt-16 px-4"
         style={{ fontFamily: "Inter, Arial, sans-serif" }}
       >
@@ -26,8 +24,7 @@ export const ProfileSummary = () => {
             </p>
           ))}
         </Provider>
-      </div>
-    </AnimateOnScroll>
+    </div>
   );
 };
 

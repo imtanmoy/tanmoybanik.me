@@ -1,4 +1,3 @@
-import { portfolioData } from "../data/portfolio";
 import { ParticleAnimation } from "./particle-animation";
 import { BlinkingLight } from "./blinking-light";
 import { SocialLinks } from "./social-links";
@@ -53,7 +52,11 @@ const tubLight = {
     "linear-gradient(90deg,rgba(0,0,0,0) 0%, rgb(0,0,0) 50%,rgba(0,0,0,0) 100%)",
 };
 
-export const Hero = () => {
+interface HeroProps {
+  headline: string;
+}
+
+export const Hero = ({ headline }: HeroProps) => {
   return (
     <div className="relative h-auto overflow-hidden">
       <div className="absolute inset-0">
@@ -137,7 +140,7 @@ export const Hero = () => {
           <Stars />
           <p className="text-lg font-extralight">
             <Balancer>
-              {portfolioData.headline}
+              {headline}
             </Balancer>
           </p>
         </div>
