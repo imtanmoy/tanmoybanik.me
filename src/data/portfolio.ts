@@ -46,7 +46,8 @@ export interface Skills {
 }
 
 export interface PortfolioData {
-  about: string[];
+  headline: string;
+  profileSummary: string[];
   experiences: Experience[];
   education: Education[];
   projects: Project[];
@@ -80,7 +81,8 @@ const validatePortfolioData = (data: unknown): PortfolioData => {
 
   // Type guard for the main object
   const hasMainSections = hasRequiredProperties<PortfolioData>(data, [
-    "about",
+    "headline",
+    "profileSummary",
     "experiences",
     "education",
     "projects",
@@ -94,7 +96,7 @@ const validatePortfolioData = (data: unknown): PortfolioData => {
 
   // Check if all required sections exist as arrays
   if (
-    !Array.isArray(data.about) ||
+    !Array.isArray(data.profileSummary) ||
     !Array.isArray(data.experiences) ||
     !Array.isArray(data.education) ||
     !Array.isArray(data.projects) ||

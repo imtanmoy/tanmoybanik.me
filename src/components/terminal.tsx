@@ -90,7 +90,7 @@ export const Terminal = () => {
       case "about":
         return (
           <div className="space-y-4">
-            {portfolioData.about.map((paragraph, i) => (
+            {portfolioData.profileSummary.map((paragraph, i) => (
               <div key={i} className={`${cardBg} rounded-lg p-4 ${borderColor} border ${textColor} leading-relaxed`}>
                 {paragraph}
               </div>

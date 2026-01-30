@@ -1,3 +1,4 @@
+import { portfolioData } from "../data/portfolio";
 import { ParticleAnimation } from "./particle-animation";
 import { BlinkingLight } from "./blinking-light";
 import { SocialLinks } from "./social-links";
@@ -136,8 +137,7 @@ export const Hero = () => {
           <Stars />
           <p className="text-lg font-extralight">
             <Balancer>
-              A passionate full-stack engineer with 7+ years of experience
-              building modern & highly scalable web apps and services.
+              {portfolioData.headline}
             </Balancer>
           </p>
         </div>
