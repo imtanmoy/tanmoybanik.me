@@ -199,14 +199,20 @@
         "Implemented HIPAA-compliant data handling for healthcare platforms."
       ],
       "technologies": [
+        "TypeScript",
         "Node.js",
         "NestJS",
         "React",
+        "AWS",
         "AWS Lambda",
+        "AWS ECS",
+        "AWS RDS",
         "PostgreSQL",
         "MySQL",
         "Docker",
         "CI/CD",
+        "GitHub Actions",
+        "REST APIs",
         "HIPAA Compliance"
       ]
     },
