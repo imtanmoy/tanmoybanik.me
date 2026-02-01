@@ -193,9 +193,9 @@
         "Designed and developed high-performance Node.js microservices using NestJS and AWS Lambda.",
         "Built and optimized serverless functions, reducing cold start times and improving runtime performance.",
         "Developed React-based user interfaces with a focus on performance and usability.",
-        "Built an embedded banking solution by integrating partner bank APIs.",
+        "Developed an embedded banking solution by integrating partner bank APIs to support core business workflows.",
         "Architected automated SSL certificate generation, reducing manual configuration time by ~80%.",
-        "Optimized CI/CD pipelines, reducing deployment times by ~50%.",
+        "Optimized CI/CD pipelines to cut deployment time by ~50%, alongside unit and integration tests using Jest, Mocha, and Chai.",
         "Implemented HIPAA-compliant data handling for healthcare platforms."
       ],
       "technologies": [
