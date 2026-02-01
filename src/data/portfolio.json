@@ -190,13 +190,13 @@
       "startDate": "May 2021",
       "endDate": "Mar 2023",
       "highlights": [
-        "Designed and developed high-performance Node.js microservices using NestJS framework and AWS Lambda",
-        "Developed UI using React with a focus on performance and user experience",
-        "Optimized Node.js serverless functions, reducing cold start times and improving performance",
-        "Developed an embedded banking solution integrating partner bank APIs",
-        "Architected automated SSL certificate generation, reducing manual configuration time by 80%",
-        "Optimized CI/CD pipelines, decreasing deployment times by 50%",
-        "Implemented HIPAA-compliant data handling for healthcare platforms"
+        "Designed and developed high-performance Node.js microservices using NestJS and AWS Lambda.",
+        "Built and optimized serverless functions, reducing cold start times and improving runtime performance.",
+        "Developed React-based user interfaces with a focus on performance and usability.",
+        "Built an embedded banking solution by integrating partner bank APIs.",
+        "Architected automated SSL certificate generation, reducing manual configuration time by ~80%.",
+        "Optimized CI/CD pipelines, reducing deployment times by ~50%.",
+        "Implemented HIPAA-compliant data handling for healthcare platforms."
       ],
       "technologies": [
         "Node.js",
