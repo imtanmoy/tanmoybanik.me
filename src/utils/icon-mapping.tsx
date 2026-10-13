@@ -12,12 +12,11 @@ import {
   SiMysql, 
   SiMongodb, 
   SiPostgresql, 
-  SiAmazon, 
   SiGraphql, 
   SiNestjs, 
   SiRabbitmq, 
   SiMqtt, 
-  SiD3Dotjs,
+  SiD3,
   SiIpfs,
   SiJavascript,
   SiOpenjdk,
@@ -35,7 +34,6 @@ import {
   SiMocha,
   SiCypress,
   SiGithub,
-  SiLinkedin,
   SiX,
   SiFastapi,
   SiGo,
@@ -50,6 +48,7 @@ import {
   SiNginx,
   SiStripe
 } from 'react-icons/si';
+import { FaAmazon, FaLinkedin } from 'react-icons/fa';
 import { 
   TbTestPipe, 
   TbTool, 
@@ -82,7 +81,7 @@ export const technologyIconMap: Record<string, TechnologyIcon> = {
   "Redux": { icon: <SiRedux />, color: "text-purple-600" },
   "JavaScript": { icon: <SiJavascript />, color: "text-yellow-400" },
   "TypeScript": { icon: <SiTypescript />, color: "text-blue-600" },
-  "D3.js": { icon: <SiD3Dotjs />, color: "text-orange-500" },
+  "D3.js": { icon: <SiD3 />, color: "text-orange-500" },
   "Plotly.js": { icon: <SiPlotly />, color: "text-blue-500" },
   "Tailwind CSS": { icon: <SiTailwindcss />, color: "text-cyan-400" },
   "Expo": { icon: <SiExpo />, color: "text-blue-600" },
@@ -117,11 +116,11 @@ export const technologyIconMap: Record<string, TechnologyIcon> = {
   "SQLAlchemy": { icon: <SiSqlalchemy />, color: "text-red-600" },
   
   // Cloud & DevOps
-  "AWS": { icon: <SiAmazon />, color: "text-orange-500" },
-  "AWS ECS": { icon: <SiAmazon />, color: "text-orange-500" },
-  "AWS Lambda": { icon: <SiAmazon />, color: "text-orange-500" },
-  "AWS SQS": { icon: <SiAmazon />, color: "text-orange-500" },
-  "AWS (CloudFormation, CDK, ECS, Lambda)": { icon: <SiAmazon />, color: "text-orange-500" },
+  "AWS": { icon: <FaAmazon />, color: "text-orange-500" },
+  "AWS ECS": { icon: <FaAmazon />, color: "text-orange-500" },
+  "AWS Lambda": { icon: <FaAmazon />, color: "text-orange-500" },
+  "AWS SQS": { icon: <FaAmazon />, color: "text-orange-500" },
+  "AWS (CloudFormation, CDK, ECS, Lambda)": { icon: <FaAmazon />, color: "text-orange-500" },
   "Docker": { icon: <SiDocker />, color: "text-blue-400" },
   "Docker Compose": { icon: <SiDocker />, color: "text-blue-400" },
   "GitHub Actions": { icon: <SiGithubactions />, color: "text-gray-700" },
@@ -172,7 +171,7 @@ export const technologyIconMap: Record<string, TechnologyIcon> = {
   
   // Social & Communication
   "GitHub": { icon: <SiGithub />, color: "text-gray-300" },
-  "LinkedIn": { icon: <SiLinkedin />, color: "text-blue-500" },
+  "LinkedIn": { icon: <FaLinkedin />, color: "text-blue-500" },
   "X": { icon: <SiX />, color: "text-white" },
   "Email": { icon: <HiOutlineMail />, color: "text-red-400" },
   "Resume": { icon: <HiOutlineDocumentText />, color: "text-green-400" }
