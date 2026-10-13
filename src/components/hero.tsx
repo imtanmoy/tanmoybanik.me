@@ -62,10 +62,7 @@ export const Hero = ({ headline, children }: HeroProps) => {
     <div className="relative h-auto overflow-hidden">
       <div className="absolute inset-0">{children}</div>
 
-      <div
-        className="grid grid-cols-8 sm:grid-cols-12 pt-16 text-center items-center text-[#e6d4ff]"
-        id="home"
-      >
+      <div className="grid grid-cols-8 sm:grid-cols-12 pt-16 text-center items-center text-[#e6d4ff]">
         <div className="absolute inset-0 flex items-top justify-center top-0">
           <BlinkingLight />
         </div>
