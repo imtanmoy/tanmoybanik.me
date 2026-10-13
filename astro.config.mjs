@@ -1,4 +1,4 @@
-import { defineConfig } from "astro/config";
+import { defineConfig, fontProviders } from "astro/config";
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
@@ -11,6 +11,17 @@ export default defineConfig({
   build: {
     inlineStylesheets: "always",
   },
+  fonts: [
+    {
+      name: "Inter",
+      cssVariable: "--font-inter-sans",
+      provider: fontProviders.google(),
+      weights: ["100 900"],
+      styles: ["normal"],
+      subsets: ["latin"],
+      fallbacks: ["sans-serif"],
+    },
+  ],
   vite: {
     plugins: [tailwindcss()],
   },

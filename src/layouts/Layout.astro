@@ -1,4 +1,5 @@
 ---
+import { Font } from "astro:assets";
 import "../styles/global.css";
 import GoogleAnalytics from "../components/google-analytics.astro";
 
@@ -17,34 +18,18 @@ const MEASUREMENT_ID = import.meta.env.GA_MEASUREMENT_ID;
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="canonical" href="https://tanmoybanik.me/" />
 
-    <!-- Preconnect to origins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <Font cssVariable="--font-inter-sans" preload />
 
     <!-- Inline critical CSS -->
     <style is:inline>
       /* Critical CSS for initial page load */
       body {
         margin: 0;
-        font-family: "Inter", sans-serif;
+        font-family: var(--font-inter-sans);
         background-color: #1a1a1a;
         color: #ffffff;
       }
     </style>
-
-    <!-- Defer non-critical CSS -->
-    <link
-      rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <noscript>
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
-      />
-    </noscript>
 
     <title>Tanmoy Banik - Software Engineer | Full Stack Developer</title>
     <meta
