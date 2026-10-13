@@ -1,13 +1,13 @@
 {
-  "headline": "Senior Software Engineer | Owning End-to-End Product Architecture & Cloud-Native Systems",
+  "headline": "Senior Software Engineer | Cloud & Distributed Systems",
   "profileSummary": [
-    "Senior Software Engineer with 7+ years of experience owning and delivering production systems end to end\u2014from API design to cloud deployment and long-term maintenance. I focus on cloud-native systems using TypeScript, NestJS, and PostgreSQL, with strong full-stack experience in React and React Native when needed.",
-    "I have led architecture decisions, built reliable microservices, and created CI/CD pipelines that improved deployment speed, system reliability, and long-term maintainability. I work best in product-driven teams where engineers own systems, make clear trade-offs, and are accountable for what runs in production."
+    "Senior Software Engineer based in Melbourne with 9+ years of experience designing, building, and operating production systems. I focus on backend and platform engineering using AWS, TypeScript, Node.js, NestJS, and PostgreSQL, with full-stack experience in React and React Native.",
+    "I have led architecture decisions, built distributed and event-driven systems, and improved production reliability, API performance, and deployment speed. My experience includes healthcare, banking, and mobile device platforms, with access control and audit logging built into core workflows. I have full working rights in Australia and require no sponsorship."
   ],
   "projects": [
     {
       "title": "Document Management System",
-      "description": "Developed a comprehensive document management system for a banking client, enabling secure digital transformation of physical records with advanced access controls and OCR integration.",
+      "description": "Developed a secure, on-premises document management system for a banking client using React, Spring Boot, and MSSQL. Built a distributed OCR processing pipeline using Flask, Celery, RabbitMQ, and Tesseract, handling around 100,000 documents with role-based access controls and audit logging.",
       "technologies": [
         "React",
         "TypeScript",
@@ -25,7 +25,7 @@
     },
     {
       "title": "Natural Language Query Platform",
-      "description": "Engineered an innovative analytics platform with a natural language-driven interface, allowing users to effortlessly query and visualize complex datasets through intuitive language interactions.",
+      "description": "Built APIs and React-based visualizations for an enterprise analytics platform that lets users query datasets using natural language. Developed context-based query suggestions, expanded supported query patterns, and optimized large datasets for responsive charts and efficient memory usage.",
       "technologies": [
         "React",
         "D3.js",
@@ -41,7 +41,7 @@
     },
     {
       "title": "Healthcare Practice Management Platform",
-      "description": "Created a comprehensive web application for healthcare professionals to streamline practice operations, including patient record management, appointment scheduling, and billing integrations.",
+      "description": "Built backend services and React-based interfaces for healthcare workflows, including patient records, appointment scheduling, and billing integrations. Implemented access controls and audit logging, integrated partner bank APIs, and automated SSL certificate generation and renewal, reducing manual configuration effort by approximately 80%.",
       "technologies": [
         "React",
         "Node.js",
@@ -58,7 +58,7 @@
     },
     {
       "title": "Pinwheel Parental Control Smartphone",
-      "description": "Developed key components for a kid-safe smartphone platform with robust parental controls, focusing on secure authentication, device management, and family-friendly app ecosystem.",
+      "description": "Built backend, web, and mobile features for a smartphone platform for children and teens. Implemented WebAuthn and biometric authentication, built a RabbitMQ-backed MQTT pipeline for device communication, and led a zero-downtime MongoDB migration that reduced API latency by approximately 55% (2.0 s to 0.9 s).",
       "technologies": [
         "React Native",
         "Node.js",
@@ -77,7 +77,7 @@
     {
       "title": "Dolpin",
       "description": "A decentralized and encrypted storage layer built with IPFS / Filecoin, enabling secure file sharing. Designed to back up valuable NFTs and digital assets with enhanced privacy and security.",
-      "technologies": ["React", "IPFS", "Node", "AWS", "TypeScript"],
+      "technologies": ["React", "IPFS", "Node.js", "AWS", "TypeScript"],
       "link": "https://dolpin.io",
       "image": "/images/dolpin-bg.avif"
     }
@@ -148,17 +148,18 @@
   "experiences": [
     {
       "company": "Pinwheel",
-      "position": "Full Stack Software Engineer",
+      "position": "Senior Software Engineer (Full Stack)",
       "location": "Remote",
       "startDate": "May 2023",
       "endDate": "Present",
       "highlights": [
-        "Developed and maintained web and backend systems using React, NestJS, PostgreSQL, and React Native.",
-        "Implemented WebAuthn and biometric authentication across web and mobile platforms.",
-        "Developed a RabbitMQ-based service for real-time mobile device updates using the MQTT protocol.",
-        "Led a zero-downtime MongoDB migration by separating database and backend workloads, reducing API latency by ~55% (≈2s → 0.9s) and backend CPU usage from ~96–99% to ~70%.",
-        "Implemented AWS production infrastructure changes, including network isolation, private connectivity, and load-balanced service access.",
-        "Designed and maintained CI/CD pipelines using GitHub Actions, and built unit, integration, and end-to-end tests with Vitest and Cypress."
+        "Led a zero-downtime MongoDB migration separating database and backend workloads, reducing API latency by approximately 55% (2.0 s to 0.9 s) and backend CPU usage from 96–99% to approximately 70%.",
+        "Redesigned AWS production networking with private subnets and load balancers, removing direct public access to application and database services.",
+        "Resolved fleet-wide polling overload in a GenieACS device-management platform and migrated NLB/ALB routing for VoIP/WebRTC devices.",
+        "Built a RabbitMQ-backed MQTT pipeline for real-time, bidirectional communication between mobile devices and backend services, with reconnection handling.",
+        "Implemented WebAuthn and biometric authentication across web and React Native clients.",
+        "Designed and maintained GitHub Actions CI/CD pipelines and implemented unit, integration, and end-to-end tests using Vitest and Cypress.",
+        "Built and maintained full-stack applications using React, NestJS, PostgreSQL, and React Native."
       ],
       "technologies": [
         "TypeScript",
@@ -185,18 +186,18 @@
     },
     {
       "company": "MedEase Technology (Ease)",
-      "position": "Senior Software Engineer",
+      "position": "Software Engineer to Senior Software Engineer",
       "location": "Remote",
       "startDate": "May 2021",
       "endDate": "Mar 2023",
       "highlights": [
-        "Designed and developed high-performance Node.js microservices using NestJS and AWS Lambda.",
-        "Built and optimized serverless functions, reducing cold start times and improving runtime performance.",
-        "Developed React-based user interfaces with a focus on performance and usability.",
-        "Developed an embedded banking solution by integrating partner bank APIs to support core business workflows.",
-        "Architected automated SSL certificate generation, reducing manual configuration time by ~80%.",
-        "Optimized CI/CD pipelines to cut deployment time by ~50%, alongside unit and integration tests using Jest, Mocha, and Chai.",
-        "Implemented HIPAA-compliant data handling for healthcare platforms."
+        "Joined as Software Engineer in May 2021; promoted to Senior Software Engineer in July 2022.",
+        "Built NestJS microservices and developed AWS Lambda services using Serverless Framework across separate projects.",
+        "Developed React-based interfaces for healthcare workflows.",
+        "Integrated partner bank APIs to deliver an embedded banking solution supporting core business workflows.",
+        "Automated SSL certificate generation and renewal, reducing manual configuration effort by approximately 80% and eliminating recurring certificate-related outages.",
+        "Redesigned CI/CD pipelines, reducing deployment time by approximately 50%, and implemented unit and integration tests using Jest, Mocha, and Chai.",
+        "Implemented HIPAA-compliant data handling across healthcare platforms, including access controls and audit logging."
       ],
       "technologies": [
         "TypeScript",
@@ -205,6 +206,7 @@
         "React",
         "AWS",
         "AWS Lambda",
+        "Serverless Framework",
         "AWS ECS",
         "AWS RDS",
         "PostgreSQL",
@@ -223,13 +225,12 @@
       "startDate": "Jan 2020",
       "endDate": "Apr 2021",
       "highlights": [
-        "Developed secure, on-premise document management system using React, Spring Boot, and MSSQL",
-        "Engineered a document processing pipeline with Python (Flask), Celery, RabbitMQ, and Tesseract OCR",
-        "Handled around 100k documents with efficient processing capabilities",
-        "Integrated role-based access controls and audit logging for regulatory compliance",
-        "Automated COVID-19 data integration and daily chart generation",
-        "Led cross-functional remote team for healthcare product development",
-        "Created context-based Natural Language Query (NLQ) suggestion framework"
+        "Developed a secure, on-premises document management system using React, Spring Boot, and MSSQL.",
+        "Engineered a document processing pipeline with Python (Flask), Celery, RabbitMQ, and Tesseract OCR, handling around 100,000 documents.",
+        "Integrated role-based access controls and audit logging for regulatory compliance.",
+        "Automated COVID-19 data integration and daily chart generation.",
+        "Led a cross-functional remote team developing a healthcare product.",
+        "Created a framework for context-based Natural Language Query (NLQ) suggestions."
       ],
       "technologies": [
         "React",
@@ -252,12 +253,12 @@
       "startDate": "Jun 2019",
       "endDate": "Dec 2019",
       "highlights": [
-        "Decoupled a monolithic application into independent services using RabbitMQ",
-        "Created a framework for context-based NLQ (Natural Language Query) suggestions using Python",
-        "Converted and managed services using Docker and Docker Compose",
-        "Developed a centralized logging system with Elasticsearch, Logstash, and Kibana (ELK)",
-        "Collaborated with the data science team to optimize query processing algorithms",
-        "Developed a Java Spring Boot service to retrieve database metadata, improving SQL database compatibility"
+        "Decoupled a monolithic application into independent services using RabbitMQ.",
+        "Created a framework for context-based NLQ (Natural Language Query) suggestions using Python.",
+        "Converted and managed services using Docker and Docker Compose.",
+        "Developed a centralized logging system with Elasticsearch, Logstash, and Kibana (ELK).",
+        "Collaborated with the data science team to optimize query processing algorithms.",
+        "Developed a Java Spring Boot service to retrieve database metadata, improving SQL database compatibility."
       ],
       "technologies": [
         "Python",
@@ -279,12 +280,12 @@
       "startDate": "May 2018",
       "endDate": "May 2019",
       "highlights": [
-        "Built APIs to summarize datasets and retrieve database information for the NLQ product",
-        "Developed UI components and interactive charts with Plotly.js and D3.js and React",
-        "Optimized large datasets for smooth performance and efficient memory usage",
-        "Optimized data processing and background tasks, ensuring timely updates of database summaries",
-        "Enhanced the NLQ system by implementing new query patterns",
-        "Expanded supported data types and visualizations for the analytics platform"
+        "Built APIs to summarize datasets and retrieve database information for the Natural Language Query (NLQ) product.",
+        "Developed React UI components and interactive charts using Plotly.js and D3.js.",
+        "Optimized large datasets for smooth performance and efficient memory usage.",
+        "Optimized data processing and background tasks to keep database summaries up to date.",
+        "Enhanced the NLQ system by implementing new query patterns.",
+        "Expanded supported data types and visualizations for the analytics platform."
       ],
       "technologies": [
         "React",
@@ -307,11 +308,11 @@
       "startDate": "Jan 2017",
       "endDate": "Apr 2018",
       "highlights": [
-        "Developed a social network application using the MEAN stack",
-        "Implemented REST APIs with Laravel",
-        "Developed mobile apps using IONIC 2"
+        "Built a full-stack social networking application using the MEAN stack.",
+        "Designed and implemented REST APIs using Laravel.",
+        "Developed mobile applications using Ionic 2."
       ],
-      "technologies": ["MEAN Stack", "Laravel", "IONIC", "Mobile Development"]
+      "technologies": ["MEAN Stack", "Laravel", "Ionic 2", "Mobile Development"]
     }
   ],
   "skills": {
@@ -320,7 +321,7 @@
       "TypeScript",
       "Python",
       "Java",
-      "Golang",
+      "Go",
       "PHP",
       "SQL"
     ],
@@ -331,23 +332,23 @@
       "FastAPI",
       "Flask",
       "Django",
-      "Laravel"
+      "Laravel",
+      "GraphQL",
+      "Apollo GraphQL",
+      "REST APIs"
     ],
     "Front-end": [
       "React.js",
       "React Native",
       "Next.js",
       "Redux",
-      "GraphQL",
-      "Apollo GraphQL",
-      "REST APIs",
       "Tailwind CSS",
       "Expo",
-      "StoryBook"
+      "Storybook"
     ],
     "Database": ["MongoDB", "MySQL", "PostgreSQL", "Redis"],
     "DevOps & Cloud": [
-      "AWS (CloudFormation, CDK)",
+      "AWS (Lambda, ECS, RDS, SQS, VPC, ALB, CloudFormation, CDK)",
       "Google Cloud Platform (GCP)",
       "Docker",
       "Nginx",
