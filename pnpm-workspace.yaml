@@ -1,6 +1,3 @@
-onlyBuiltDependencies:
-  - esbuild
-  - sharp
-
-ignoredBuiltDependencies:
-  - '@tsparticles/engine'
+allowBuilds:
+  sharp: true
+  '@tsparticles/engine': false
