@@ -1,24 +1,29 @@
 import type { ISourceOptions } from "@tsparticles/engine";
-import type { IParticlesProps } from "@tsparticles/react";
+import type {
+  IParticlesProps,
+  IParticlesProviderProps,
+} from "@tsparticles/react";
 import { useEffect, useMemo, useState, type ComponentType } from "react";
 
+interface ParticlesModules {
+  Particles: ComponentType<IParticlesProps>;
+  ParticlesProvider: ComponentType<IParticlesProviderProps>;
+  loadSlim: IParticlesProviderProps["init"];
+}
+
 export const ParticleAnimation = () => {
-  const [Particles, setParticles] =
-    useState<ComponentType<IParticlesProps> | null>(null);
+  const [modules, setModules] = useState<ParticlesModules | null>(null);
 
   useEffect(() => {
     let timeoutId: NodeJS.Timeout;
     // Dynamic imports keep tsparticles out of the hero bundle until the browser is idle.
     const initParticles = async () => {
-      const [{ default: ParticlesComponent, initParticlesEngine }, { loadSlim }] =
+      const [{ Particles, ParticlesProvider }, { loadSlim }] =
         await Promise.all([
           import("@tsparticles/react"),
           import("@tsparticles/slim"),
         ]);
-      await initParticlesEngine(async (engine) => {
-        await loadSlim(engine);
-      });
-      setParticles(() => ParticlesComponent);
+      setModules({ Particles, ParticlesProvider, loadSlim });
     };
 
     if (typeof window !== "undefined" && "requestIdleCallback" in window) {
@@ -106,9 +111,16 @@ export const ParticleAnimation = () => {
     []
   );
 
-  if (Particles) {
+  if (modules) {
+    const { Particles, ParticlesProvider, loadSlim } = modules;
     return (
-      <Particles id="tsparticles" options={options} className="w-full h-full" />
+      <ParticlesProvider init={loadSlim}>
+        <Particles
+          id="tsparticles"
+          options={options}
+          className="w-full h-full"
+        />
+      </ParticlesProvider>
     );
   }
 
