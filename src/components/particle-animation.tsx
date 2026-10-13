@@ -1,19 +1,24 @@
-import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { MoveDirection, OutMode } from "@tsparticles/engine";
-import { loadSlim } from "@tsparticles/slim";
-import { useEffect, useMemo, useState } from "react";
+import type { ISourceOptions } from "@tsparticles/engine";
+import type { IParticlesProps } from "@tsparticles/react";
+import { useEffect, useMemo, useState, type ComponentType } from "react";
 
 export const ParticleAnimation = () => {
-  const [init, setInit] = useState(false);
+  const [Particles, setParticles] =
+    useState<ComponentType<IParticlesProps> | null>(null);
 
   useEffect(() => {
     let timeoutId: NodeJS.Timeout;
-    const initParticles = () => {
-      initParticlesEngine(async (engine) => {
+    // Dynamic imports keep tsparticles out of the hero bundle until the browser is idle.
+    const initParticles = async () => {
+      const [{ default: ParticlesComponent, initParticlesEngine }, { loadSlim }] =
+        await Promise.all([
+          import("@tsparticles/react"),
+          import("@tsparticles/slim"),
+        ]);
+      await initParticlesEngine(async (engine) => {
         await loadSlim(engine);
-      }).then(() => {
-        setInit(true);
       });
+      setParticles(() => ParticlesComponent);
     };
 
     if (typeof window !== "undefined" && "requestIdleCallback" in window) {
@@ -29,7 +34,7 @@ export const ParticleAnimation = () => {
     };
   }, []);
 
-  const options = useMemo(
+  const options = useMemo<ISourceOptions>(
     () => ({
       fpsLimit: 60,
       interactivity: {
@@ -65,10 +70,10 @@ export const ParticleAnimation = () => {
           width: 0.5,
         },
         move: {
-          direction: MoveDirection.none,
+          direction: "none",
           enable: true,
           outModes: {
-            default: OutMode.out,
+            default: "out",
           },
           random: false,
           speed: 1,
@@ -101,7 +106,7 @@ export const ParticleAnimation = () => {
     []
   );
 
-  if (init) {
+  if (Particles) {
     return (
       <Particles id="tsparticles" options={options} className="w-full h-full" />
     );

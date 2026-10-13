@@ -1,4 +1,6 @@
 onlyBuiltDependencies:
-  - '@tsparticles/engine'
   - esbuild
   - sharp
+
+ignoredBuiltDependencies:
+  - '@tsparticles/engine'
