@@ -3,7 +3,7 @@ import { FiGithub, FiLinkedin, FiMail, FiTwitter } from "react-icons/fi";
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="flex flex-col gap-2.5 py-6 w-full text-center border border-t-1 border-white/10 relative z-10">
+    <footer className="flex flex-col gap-2.5 py-6 w-full text-center border border-t border-white/10 relative z-10">
       <p className="text-white/50">Made with ❤️ by Tanmoy Banik</p>
       <div className="flex items-center justify-center gap-4 text-white">
         <a

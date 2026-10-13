@@ -37,7 +37,7 @@ export const Experiences = () => {
                   {exp.highlights.map((highlight, idx) => (
                     <li key={idx} className="flex items-start">
                       <svg
-                        className="w-3 h-3 text-emerald-400 mr-2 mt-1 flex-shrink-0"
+                        className="w-3 h-3 text-emerald-400 mr-2 mt-1 shrink-0"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                       >

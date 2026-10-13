@@ -19,7 +19,7 @@ export const ProfileSummary = () => {
         </div>
         <Provider>
           {portfolioData.profileSummary.map((paragraph, index) => (
-            <p key={index} className="min-h-[2.5rem]">
+            <p key={index} className="min-h-10">
               <Balancer>{paragraph}</Balancer>
             </p>
           ))}

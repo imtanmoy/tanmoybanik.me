@@ -16,7 +16,7 @@ const ProjectCard = ({ project, className, ...props }: Props) => {
         className={`flex flex-col h-full transition-all duration-300 relative overflow-hidden`}
       >
         {project.image && (
-          <div className="w-full h-40 overflow-hidden mb-4 rounded-sm bg-white/5 relative">
+          <div className="w-full h-40 overflow-hidden mb-4 rounded-xs bg-white/5 relative">
             <img
               src={project.image}
               alt={`Screenshot of ${project.title} project showing the user interface and key features`}
@@ -48,7 +48,7 @@ const ProjectCard = ({ project, className, ...props }: Props) => {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-emerald-400 transition-colors flex items-center gap-1 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black rounded"
+                  className="text-gray-400 hover:text-emerald-400 transition-colors flex items-center gap-1 text-sm focus:outline-hidden focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black rounded-sm"
                   aria-label={`View ${project.title} project - Opens in new tab`}
                 >
                   <FiExternalLink aria-hidden="true" /> 
@@ -61,7 +61,7 @@ const ProjectCard = ({ project, className, ...props }: Props) => {
                   href={project.githubLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-emerald-400 transition-colors flex items-center gap-1 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black rounded"
+                  className="text-gray-400 hover:text-emerald-400 transition-colors flex items-center gap-1 text-sm focus:outline-hidden focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black rounded-sm"
                   aria-label={`GitHub repository for ${project.title} - Opens in new tab`}
                 >
                   <FiGithub aria-hidden="true" /> 

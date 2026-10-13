@@ -7,10 +7,10 @@ import { Balancer } from "react-wrap-balancer";
 const Stars = () => {
   return (
     <>
-      <div className="h-1.5 bg-[#6ee7b7] p-0 m-0 absolute aspect-square rotate-45 -left-[3.5px] -top-[3.5px]"></div>
-      <div className="h-1.5 bg-[#6ee7b7] p-0 m-0 absolute aspect-square rotate-45 -right-[3.5px] -top-[3.5px]"></div>
-      <div className="h-1.5 bg-[#6ee7b7] p-0 m-0 absolute aspect-square rotate-45 -left-[3.5px] -bottom-[3.5px]"></div>
-      <div className="h-1.5 bg-[#6ee7b7] p-0 m-0 absolute aspect-square rotate-45 -right-[3.5px] -bottom-[3.5px]"></div>
+      <div className="h-1.5 bg-[#6ee7b7] p-0 m-0 absolute aspect-square rotate-45 left-[-3.5px] top-[-3.5px]"></div>
+      <div className="h-1.5 bg-[#6ee7b7] p-0 m-0 absolute aspect-square rotate-45 right-[-3.5px] top-[-3.5px]"></div>
+      <div className="h-1.5 bg-[#6ee7b7] p-0 m-0 absolute aspect-square rotate-45 left-[-3.5px] bottom-[-3.5px]"></div>
+      <div className="h-1.5 bg-[#6ee7b7] p-0 m-0 absolute aspect-square rotate-45 right-[-3.5px] bottom-[-3.5px]"></div>
     </>
   );
 };
@@ -79,64 +79,64 @@ export const Hero = ({ headline }: HeroProps) => {
 
         {/* 1st row */}
         <div
-          className="hidden sm:block h-full col-span-2 border-white border-opacity-10 border-b border-r"
+          className="hidden sm:block h-full col-span-2 border-white/10 border-b border-r"
           style={toTopLeft}
         ></div>
-        <div className="hidden sm:block h-full border-white border-opacity-10 border-b"></div>
+        <div className="hidden sm:block h-full border-white/10 border-b"></div>
         <div
-          className="col-start-2 col-span-6 sm:col-start-0 sm:col-span-6 h-full min-h-16 border-white border-opacity-10 border-b border-l border-r relative"
+          className="col-start-2 col-span-6 sm:col-start-0 sm:col-span-6 h-full min-h-16 border-white/10 border-b border-l border-r relative"
           style={toTop}
         ></div>
-        <div className="hidden sm:block h-full border-white border-opacity-10 border-b"></div>
+        <div className="hidden sm:block h-full border-white/10 border-b"></div>
         <div
-          className="hidden sm:block col-span-2 h-full border-white border-opacity-10 border-l border-b"
+          className="hidden sm:block col-span-2 h-full border-white/10 border-l border-b"
           style={toTopRight}
         ></div>
 
         {/* 2nd row */}
         <div
-          className="hidden sm:block h-full col-span-2 border-white border-opacity-10 border-b border-r"
+          className="hidden sm:block h-full col-span-2 border-white/10 border-b border-r"
           style={toLeft}
         ></div>
-        <div className="hidden sm:block h-full border-white border-opacity-10 border-b"></div>
-        <div className="col-start-2 col-span-6 sm:col-start-0 sm:col-span-6 h-full min-h-16 border-white border-opacity-10 border-b border-l border-r flex items-center justify-center">
+        <div className="hidden sm:block h-full border-white/10 border-b"></div>
+        <div className="col-start-2 col-span-6 sm:col-start-0 sm:col-span-6 h-full min-h-16 border-white/10 border-b border-l border-r flex items-center justify-center">
           <p className="text-lg">Hi there, I&apos;m</p>
         </div>
-        <div className="hidden sm:block h-full border-white border-opacity-10 border-b"></div>
+        <div className="hidden sm:block h-full border-white/10 border-b"></div>
         <div
-          className="hidden sm:block col-span-2 h-full border-white border-opacity-10 border-l border-b"
+          className="hidden sm:block col-span-2 h-full border-white/10 border-l border-b"
           style={toRight}
         ></div>
 
         {/* 3rd row */}
         <div
-          className="hidden sm:block h-full col-span-2 border-white border-opacity-10 border-b border-r"
+          className="hidden sm:block h-full col-span-2 border-white/10 border-b border-r"
           style={toLeft}
         ></div>
-        <div className="hidden sm:block h-full border-white border-opacity-10 border-b"></div>
-        <div className="col-start-2 col-span-6 sm:col-start-0 sm:col-span-6 h-full min-h-16 border-white border-opacity-10 border-b border-l border-r relative flex items-start justify-center p-4">
+        <div className="hidden sm:block h-full border-white/10 border-b"></div>
+        <div className="col-start-2 col-span-6 sm:col-start-0 sm:col-span-6 h-full min-h-16 border-white/10 border-b border-l border-r relative flex items-start justify-center p-4">
           <Stars />
           <h1 id="hero-heading" className="text-5xl md:text-6xl lg:text-7xl font-bold relative">
             <span className="text-emerald-400">Tan</span>
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 via-green-300 to-emerald-400">
+            <span className="bg-clip-text text-transparent bg-linear-to-r from-emerald-400 via-green-300 to-emerald-400">
               moy
             </span>
-            <div className="absolute -inset-1 blur-sm bg-emerald-500/20 rounded-lg -z-10"></div>
+            <div className="absolute -inset-1 blur-xs bg-emerald-500/20 rounded-lg -z-10"></div>
           </h1>
         </div>
-        <div className="hidden sm:block h-full border-white border-opacity-10 border-b"></div>
+        <div className="hidden sm:block h-full border-white/10 border-b"></div>
         <div
-          className="hidden sm:block col-span-2 h-full border-l border-white border-opacity-10 border-b"
+          className="hidden sm:block col-span-2 h-full border-l border-white/10 border-b"
           style={toRight}
         ></div>
 
         {/* 4th row */}
         <div
-          className="hidden sm:block h-full col-span-2 border-b border-white border-opacity-10 border-r"
+          className="hidden sm:block h-full col-span-2 border-b border-white/10 border-r"
           style={toLeft}
         ></div>
-        <div className="hidden sm:block h-full border-white border-opacity-10 border-b"></div>
-        <div className="col-start-2 col-span-6 sm:col-start-0 sm:col-span-6 h-full min-h-16 border-white border-opacity-10 border-b border-l border-r relative flex justify-center py-4 px-8">
+        <div className="hidden sm:block h-full border-white/10 border-b"></div>
+        <div className="col-start-2 col-span-6 sm:col-start-0 sm:col-span-6 h-full min-h-16 border-white/10 border-b border-l border-r relative flex justify-center py-4 px-8">
           <Stars />
           <p className="text-lg font-extralight">
             <Balancer>
@@ -144,21 +144,21 @@ export const Hero = ({ headline }: HeroProps) => {
             </Balancer>
           </p>
         </div>
-        <div className="hidden sm:block h-full border-white border-opacity-10 border-b"></div>
+        <div className="hidden sm:block h-full border-white/10 border-b"></div>
         <div
-          className="hidden sm:block col-span-2 h-full border-white border-opacity-10 border-b border-l"
+          className="hidden sm:block col-span-2 h-full border-white/10 border-b border-l"
           style={toRight}
         ></div>
 
         {/* 5th row */}
         <div
-          className="hidden sm:block h-full col-span-2 border-white border-opacity-10 border-r"
+          className="hidden sm:block h-full col-span-2 border-white/10 border-r"
           style={toBottom}
         ></div>
         <div className="hidden sm:block h-full"></div>
         <div className="col-start-2 col-span-6 sm:col-start-0 sm:col-span-6 relative">
           <div
-            className="absolute inset-0 border-white border-opacity-10 border-l border-r"
+            className="absolute inset-0 border-white/10 border-l border-r"
             style={toBottom}
           ></div>
 
@@ -168,7 +168,7 @@ export const Hero = ({ headline }: HeroProps) => {
         </div>
         <div className="hidden sm:block h-full"></div>
         <div
-          className="hidden sm:block col-span-2 h-full border-white border-opacity-10 border-l"
+          className="hidden sm:block col-span-2 h-full border-white/10 border-l"
           style={toBottom}
         ></div>
       </div>

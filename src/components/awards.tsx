@@ -6,7 +6,7 @@ const AwardCard: React.FC<{ award: Award }> = ({ award }) => {
   return (
     <FlatCard className="flex items-start gap-4 transition-all duration-300 hover:border-emerald-500/50">
       {award.logo && (
-        <div className="w-16 h-16 flex-shrink-0 bg-white/10 rounded-lg flex items-center justify-center p-2">
+        <div className="w-16 h-16 shrink-0 bg-white/10 rounded-lg flex items-center justify-center p-2">
           <img
             src={award.logo}
             alt={`${award.title} logo`}

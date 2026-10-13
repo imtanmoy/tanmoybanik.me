@@ -87,7 +87,7 @@ export const NavBar = () => {
   return (
     <nav
       className={`fixed w-screen z-50 transition-all duration-300 ${
-        scrolled ? "bg-black/30 backdrop-blur-sm" : "bg-transparent"
+        scrolled ? "bg-black/30 backdrop-blur-xs" : "bg-transparent"
       }`}
       role="navigation"
       aria-label="Main navigation"
@@ -101,7 +101,7 @@ export const NavBar = () => {
               key={link.id}
               href={link.href}
               onClick={(e) => handleScrollTo(e, link.href)}
-              className={`px-3 py-2 rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black ${
+              className={`px-3 py-2 rounded-md transition-colors focus:outline-hidden focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black ${
                 activeSection === link.href.substring(1)
                   ? "text-emerald-400 font-bold"
                   : "text-gray-300 hover:text-emerald-400"
@@ -131,7 +131,7 @@ export const NavBar = () => {
           {/* Single mobile menu button */}
           <button
             type="button"
-            className="p-2 text-gray-300 z-100 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black rounded-md"
+            className="p-2 text-gray-300 z-100 cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black rounded-md"
             onClick={() => setIsOpen(!isOpen)}
             aria-expanded={isOpen}
             aria-controls="mobile-menu"
@@ -187,7 +187,7 @@ export const NavBar = () => {
                 key={link.id}
                 href={link.href}
                 onClick={(e) => handleScrollTo(e, link.href)}
-                className={`block px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black ${
+                className={`block px-3 py-2 rounded-md focus:outline-hidden focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-black ${
                   activeSection === link.href.substring(1)
                     ? "bg-emerald-900/20 text-emerald-400 font-medium"
                     : "text-gray-300 hover:bg-emerald-900/20 hover:text-emerald-400"
