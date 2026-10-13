@@ -1,4 +1,4 @@
-import { ParticleAnimation } from "./particle-animation";
+import type { ReactNode } from "react";
 import { BlinkingLight } from "./blinking-light";
 import { SocialLinks } from "./social-links";
 import { Balancer } from "react-wrap-balancer";
@@ -54,14 +54,13 @@ const tubLight = {
 
 interface HeroProps {
   headline: string;
+  children: ReactNode;
 }
 
-export const Hero = ({ headline }: HeroProps) => {
+export const Hero = ({ headline, children }: HeroProps) => {
   return (
     <div className="relative h-auto overflow-hidden">
-      <div className="absolute inset-0">
-        <ParticleAnimation />
-      </div>
+      <div className="absolute inset-0">{children}</div>
 
       <div
         className="grid grid-cols-8 sm:grid-cols-12 pt-16 text-center items-center text-[#e6d4ff]"
