@@ -5,6 +5,8 @@ import GoogleAnalytics from "../components/google-analytics.astro";
 
 const CF_ANALYTICS_TOKEN = import.meta.env.CF_ANALYTICS_TOKEN;
 const MEASUREMENT_ID = import.meta.env.GA_MEASUREMENT_ID;
+
+const { noindex = false } = Astro.props;
 ---
 
 <!doctype html>
@@ -16,7 +18,13 @@ const MEASUREMENT_ID = import.meta.env.GA_MEASUREMENT_ID;
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="sitemap" href="/sitemap-index.xml" />
-    <link rel="canonical" href="https://tanmoybanik.me/" />
+    {
+      noindex ? (
+        <meta name="robots" content="noindex" />
+      ) : (
+        <link rel="canonical" href="https://tanmoybanik.me/" />
+      )
+    }
 
     <Font cssVariable="--font-inter-sans" preload />
 
